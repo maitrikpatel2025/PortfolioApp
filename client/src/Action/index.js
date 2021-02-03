@@ -9,6 +9,7 @@ export const signup = (formProps,callback) => async dispatch => {
         type: AUTH_USER,
         payload: response.data.token
     })
+    localStorage.setItem('token',response.data.token)
     callback();
     } catch(e){
         dispatch({
@@ -16,5 +17,31 @@ export const signup = (formProps,callback) => async dispatch => {
          payload: 'Email in use' 
         }
         )
+    }
+}
+
+export const signin = (formProps,callback) => async dispatch => {
+    try{
+    const response = await authapi.post('/signin', formProps);
+    dispatch({
+        type: AUTH_USER,
+        payload: response.data.token
+    })
+    localStorage.setItem('token',response.data.token)
+    callback();
+    } catch(e){
+        dispatch({
+         type: AUTH_ERROR,
+         payload: 'invaild email' 
+        }
+        )
+    }
+}
+
+export const signout = () =>{
+    localStorage.removeItem('token');
+    return{
+        type: AUTH_USER,
+        payload:''
     }
 }

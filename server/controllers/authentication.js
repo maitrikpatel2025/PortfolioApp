@@ -14,24 +14,26 @@ exports.signin = function(req, res, next) {
 }
 
 exports.signup = function(req, res, next) {
-  const email = req.body.email;
-  const password = req.body.password;
-  const name = req.body.name;
-  const phone = req.body.phone;
+  const{ 
+    email,
+    password,
+    name,
+    phone,
+  } = req.body
 
   if (!email || !password) {
     return res.status(422).send({ error: 'You must provide email and password'});
   }
 
   // See if a user with the given email exists
-  User.findOne({ email: email }, function(err, existingUser) {
+  User.findOne({ email: email }, async (err, existingUser) => {
+    
     if (err) { return next(err); }
 
     // If a user with email does exist, return an error
     if (existingUser) {
       return res.status(422).send({ error: 'Email is in use' });
     }
-
     // If a user with email does NOT exist, create and save user record
     const user = new User({
       email: email,
@@ -40,11 +42,12 @@ exports.signup = function(req, res, next) {
       phone: phone,
     });
 
-    user.save(function(err) {
-      if (err) { return next(err); }
-
-      // Repond to request indicating the user was created
-      res.json({ token: tokenForUser(user) });
-    });
+    try{
+    const newUser = await user.save()
+      res.status(201).json(newUser);
+    }
+    catch (err) {
+      res.status(400).json({ message: err.message });
+    }
   });
 }

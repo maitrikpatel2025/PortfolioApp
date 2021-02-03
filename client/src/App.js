@@ -10,6 +10,8 @@ import Project from "./Components/Project/Project";
 import Contact from "./Components/Contact/Contact";
 import Admin from "./Components/Admin/admin";
 import SignUp from './Components/AdminAuth/SignUp/SignUp';
+import SignIn from './Components/AdminAuth/SignIn/SignIn';
+import SignOut from './Components/AdminAuth/SignOut/SignOut';
 
 class App extends Component {
 
@@ -29,7 +31,9 @@ class App extends Component {
                 <Route exact path="/projects" component={Project} />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/admin" component ={Admin}/>
-                <Route path="/admin/signup" component={SignUp} />
+                <Route exact path="/admin/signup" component={SignUp} />
+                <Route exact path="/admin/signin" component={SignIn} />
+                <Route exact path="/admin/signout" component={SignOut} />
               </Switch>
             </div>
           </div>

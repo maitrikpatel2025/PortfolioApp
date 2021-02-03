@@ -19,9 +19,6 @@ const userSchema = new Schema({
     phone:{
         type:Number,
     },
-    token: {
-        type: String,
-    },
     createdOn: {
         type: Date,
         default: Date.now
