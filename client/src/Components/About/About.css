@@ -1,0 +1,184 @@
+.About{
+        background: url(../../Image/tIm2o5z.png);
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+}
+.About_container{
+    padding: 30px ;
+   
+}
+.Heading{
+    padding: 20px;
+}
+.A1{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 40px;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 32px;
+    text-align: left;
+    text-transform: uppercase;
+}
+.Para{
+
+ padding: 30px 0px;
+}
+.A2{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 20px;
+    font-family: "poppins", sans-serif;
+    font-weight: 200;
+    font-size: 17px;
+    text-align: left;
+    padding: 0px 10px;
+    padding-bottom: 15px;
+}
+.Edu_container{
+    padding: 30px ;
+   
+}
+.A3{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 30px;
+    font-family: "poppins", sans-serif;
+    font-weight: 550;
+    font-size: 24px;
+    text-align: left;
+    color: black;
+}
+.A4{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 22px;
+    font-family: "poppins", sans-serif;
+    font-weight: 100;
+    font-size: 20px;
+    text-align: left;
+    color:black;
+}
+.A5{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    font-family: "poppins", sans-serif;
+    line-height: 23px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    padding: 3.5px 0px;
+    color:black;
+}
+.Educ_group{
+    padding: 15px;
+    
+    
+}
+.Cert_group{
+    padding: 15px;
+    
+}
+.A7{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 25px;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+.A7:hover{  
+    opacity: 0.5;
+    color: black;
+}
+.A8{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    font-family: "poppins", sans-serif;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    padding: 3.5px 0px;
+    color:black;
+}
+.A8:hover{
+    opacity: 0.5;
+    color:black;
+}
+.A9{  
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 40px;
+    font-weight: 600;
+    font-family: "poppins", sans-serif;
+    font-size: 32px;
+    text-align: center;
+    color: black;
+    text-transform: uppercase;
+}
+.A10{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 25px;
+    font-family: "poppins", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+
+.Q1{
+
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 20px;
+    font-family:'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    text-align: left;
+    padding: 10px 10px;
+}
+.Skill_container{
+    padding: 30px ;
+   
+}
+.photo_image{
+    
+    border: 1px solid black;
+}
+.Books_container{
+    padding: 30px ;
+}
+@media (max-width: 800px) {
+    .photo_image{
+        display: none;
+    }
+    .Q1{
+        display: none;
+    }
+    .img-icon{
+        display: none;
+    }
+}
