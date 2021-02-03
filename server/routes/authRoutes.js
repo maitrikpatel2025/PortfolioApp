@@ -1,7 +1,6 @@
 const passport = require('passport');
 
 const Authentication = require('../controllers/authentication');
-const projectscontroll = require('../controllers/projectscontroll');
 
 const requireAuth = passport.authenticate('jwt', { session: false });
 const requireSignin = passport.authenticate('local', { session: false });
@@ -19,11 +18,5 @@ module.exports = function(app) {
     res.redirect('/');
   });
 
-  //project routes
-  app.post('/project/add', projectscontroll.createprojects)
-  app.get('/project',projectscontroll.getallprojects)
-  app.get('/project/:id' ,projectscontroll.getproject)
-  
-  
 
 }

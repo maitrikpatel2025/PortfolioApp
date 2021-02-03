@@ -1,68 +1,151 @@
-const Projects = require('../models/projects');
+const Projects = require("../models/projects");
 
-exports.createprojects = async (req,res) =>  {
-    const {
-        title,
-        description,
-        summary,
-        other_details,
-        skills,
-        tech_skills_logo,
-        roles,
-        team,
-        duration,
-        start_date,
-        end_date,
-        image,
-        git_link,
-        website_link
-      } = req.body;
+exports.createprojects = async (req, res) => {
+  const {
+    title,
+    description,
+    summary,
+    other_details,
+    skills,
+    tech_skills_logo,
+    roles,
+    team,
+    duration,
+    start_date,
+    end_date,
+    image,
+    git_link,
+    website_link,
+  } = req.body;
 
-    const projects = new Projects({
-        title,
-        description,
-        summary,
-        other_details,
-        skills,
-        tech_skills_logo,
-        roles,
-        team,
-        duration,
-        start_date,
-        end_date,
-        image,
-        git_link,
-        website_link,
-      });
+  const projects = new Projects({
+    title,
+    description,
+    summary,
+    other_details,
+    skills,
+    tech_skills_logo,
+    roles,
+    team,
+    duration,
+    start_date,
+    end_date,
+    image,
+    git_link,
+    website_link,
+  });
 
-    try {
+  try {
     const newProject = await projects.save();
-        res.status(201).json(newProject);
-      } catch (err) {
-        res.status(400).json({ message: err.message });
-    }
-}
+    res.status(201).json(newProject);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+};
 
 exports.getallprojects = async (req, res) => {
-    try {
-      const projects = await Projects.find();
-      res.json(projects);
-    } catch (err) {
-      res.status(500).json({ message: err.message });
+  try {
+    const projects = await Projects.find();
+    res.json(projects);
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+};
+
+exports.getbyid = async (req, res,next) => {
+  res.json(res.project)
+};
+
+exports.editbyid = async (req, res) => {
+
+  if (req.body.title != null) {
+    res.project.title = req.body.title;
+    res.project.description = req.body.description;
+    res.project.summary = req.body.summary;
+    res.project.skills = req.body.skills;
+    res.project.tech_skills_logo = req.body.tech_skills_logo;
+    res.project.team = req.body.team;
+    res.project.roles = req.body.roles;
+    res.project.other_details= req.body.other_details;
+    res.project.duration = req.body.duration;
+    res.project.start_date = req.body.start_date;
+    res.project.end_date = req.body.end_date;
+    res.project.git_link = req.body.git_link;
+    res.project.website_link = req.body.website_link;
+    res.project.image = req.body.image;
+  }
+  try {
+    const updatedproject = await res.project.save();
+    res.json(updatedproject);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+}
+
+exports.deletebyid = async (req, res) => {
+  try {
+    await res.project.remove();
+    res.json({ message: "delete" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
+/*
+
+exports.editproject = async (req, res) => {
+  
+  const project = await Projects.findByIdAndUpdate({ _id: req.params.id}, 
+    { 
+      title: req.body.title,
+      description: req.body.description,
+      skills: req.body.skills,
+      summary: req.body.summary,
+      other_details:req.body.other_details,
+      tech_skills_logo : req.body.tech_skills_logo,
+      roles: req.body.roles,
+      team:req.body.team,
+      duration:req.body.duration,
+      start_date:req.body.start_date,
+      end_date:req.body.end_date,
+      image:req.body.image,
+      git_link:req.body.git_link,
+      website_link: req.body.website_link,
+   }, 
+  );
+  if (!project) return res.status(404).send('The product with the given ID was not found.');
+  try {
+    const updatedProject = project.save();
+    res.status(201).json(updatedProject);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
+  }
+}
+
+exports.editproject = async (req, res,next) => {
+  try{
+    project = await Projects.findOne({
+      _id: req.params.id,
+    });
+    if (project == null) {
+      return res.status(400).json({ message: "Cannot find project" });
     }
+  } catch (err) {
+    return res.status(500).json({ message: err.message });
+  }
+  res.project = project
+  
+  next()
+  if(req.body.title != null && req.body.description != null){
+    res.project.title = req.body.title,
+    res.project.description = req.body.description
+  }
+  try {
+    const updatedproject = res.project.save();
+    res.json(updatedproject);
+  } catch (err) {
+    res.status(400).json({ message: err.message });
   }
 
-exports.getproject = async(req, res) => {
-    let project;
-    try {
-      project = await Projects.findOne({
-            _id: req.params.id
-      });
-      if (project == null) {
-        return res.status(400).json({ message: "Cannot find project" });
-      }
-    } catch (err) {
-      return res.status(500).json({ message: err.message });
-    }
-    res.send(project);
-}
+};
+*/

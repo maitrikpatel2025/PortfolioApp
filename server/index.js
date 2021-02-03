@@ -42,8 +42,8 @@ app.use(
 
 //App routes
 
-router = require("./routes/authRoutes");
-router(app);
+require("./routes/authRoutes")(app);
+require('./routes/projectsRoutes')(app);
 
 
 //Server Setup

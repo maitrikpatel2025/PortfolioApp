@@ -10,31 +10,39 @@ const projectsSchema = new Schema({
   },
   summary: {
     type: String,
+    default:null,
   },
   other_details:{
     type:String,
+    default:null,
   },
-  skills: [{ type: String }],
-  tech_skills_logo :[{type:String}],
-  roles: [{ type: String }],
-  team: [{ type: String }],
+  skills: [{ type: String,default:null,}],
+  tech_skills_logo :[{type:String,default:null,}],
+  roles: [{ type: String,default:null,}],
+  team: [{ type: String,default:null,}],
   duration: {
     type: String,
+    default:null,
   },
   start_date:{
     type: Date, 
+    default:null,
   },
   end_date:{
-      type: Date,
+    type: Date,
+    default:null,
   },
   image: {
     type: String,
+    default:null,
   },
   git_link:{
     type:String,
+    default:null,
   },
   website_link:{
     type:String,
+    default:null,
   },
   create_On:{
     type: Date,
