@@ -1,38 +1,23 @@
 const Projects = require("../models/projects");
 
+
 exports.createprojects = async (req, res) => {
-  const {
-    title,
-    description,
-    summary,
-    other_details,
-    skills,
-    tech_skills_logo,
-    roles,
-    team,
-    duration,
-    start_date,
-    end_date,
-    image,
-    git_link,
-    website_link,
-  } = req.body;
 
   const projects = new Projects({
-    title,
-    description,
-    summary,
-    other_details,
-    skills,
-    tech_skills_logo,
-    roles,
-    team,
-    duration,
-    start_date,
-    end_date,
-    image,
-    git_link,
-    website_link,
+    title : req.body.title,
+    description : req.body.description,
+    summary : req.body.summary,
+    skills : req.body.skills,
+    tech_skills_logo : req.body.tech_skills_logo,
+    team : req.body.team,
+    roles : req.body.roles,
+    other_details : req.body.other_details,
+    duration : req.body.duration,
+    start_date : req.body.start_date,
+    end_date : req.body.end_date,
+    git_link : req.body.git_link,
+    website_link : req.body.website_link,
+    image : req.file.path,
   });
 
   try {
@@ -52,12 +37,11 @@ exports.getallprojects = async (req, res) => {
   }
 };
 
-exports.getbyid = async (req, res,next) => {
-  res.json(res.project)
+exports.getbyid = async (req, res, next) => {
+  res.json(res.project);
 };
 
 exports.editbyid = async (req, res) => {
-
   if (req.body.title != null) {
     res.project.title = req.body.title;
     res.project.description = req.body.description;
@@ -66,13 +50,13 @@ exports.editbyid = async (req, res) => {
     res.project.tech_skills_logo = req.body.tech_skills_logo;
     res.project.team = req.body.team;
     res.project.roles = req.body.roles;
-    res.project.other_details= req.body.other_details;
+    res.project.other_details = req.body.other_details;
     res.project.duration = req.body.duration;
     res.project.start_date = req.body.start_date;
     res.project.end_date = req.body.end_date;
     res.project.git_link = req.body.git_link;
     res.project.website_link = req.body.website_link;
-    res.project.image = req.body.image;
+    res.project.image = req.file.path;
   }
   try {
     const updatedproject = await res.project.save();
@@ -80,7 +64,7 @@ exports.editbyid = async (req, res) => {
   } catch (err) {
     res.status(400).json({ message: err.message });
   }
-}
+};
 
 exports.deletebyid = async (req, res) => {
   try {
@@ -89,7 +73,18 @@ exports.deletebyid = async (req, res) => {
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
-}
+};
+
+exports.imageup = (req, res, next) => {
+  console.log(req.file)
+  try {
+    return res.status(201).json({
+      message: "File uploded successfully",
+    });
+  } catch (error) {
+    console.error(error);
+  }
+};
 
 /*
 
