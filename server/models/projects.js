@@ -10,44 +10,44 @@ const projectsSchema = new Schema({
   },
   summary: {
     type: String,
-    default:null,
+    default: null,
   },
-  other_details:{
-    type:String,
-    default:null,
+  other_details: {
+    type: String,
+    default: null,
   },
-  skills: [{ type: String,default:null,}],
-  tech_skills_logo :[{type:String,default:null,}],
-  roles: [{ type: String,default:null,}],
-  team: [{ type: String,default:null,}],
+  skills: [{ type: String, default: null }],
+  tech_skills_logo: [{ type: String, default: null }],
+  roles: [{ type: String, default: null }],
+  team: [{ type: String, default: null }],
   duration: {
     type: String,
-    default:null,
+    default: null,
   },
-  start_date:{
-    type: Date, 
-    default:null,
-  },
-  end_date:{
+  start_date: {
     type: Date,
-    default:null,
+    default: null,
+  },
+  end_date: {
+    type: Date,
+    default: null,
   },
   image: {
     type: String,
-    default:null,
+    default: null,
   },
-  git_link:{
-    type:String,
-    default:null,
+  git_link: {
+    type: String,
+    default: null,
   },
-  website_link:{
-    type:String,
-    default:null,
+  website_link: {
+    type: String,
+    default: null,
   },
-  create_On:{
+  create_On: {
     type: Date,
-    default: Date.now()
-  }
+    default: Date.now(),
+  },
 });
 
 const Modelclass = mongoose.model("projects", projectsSchema);
