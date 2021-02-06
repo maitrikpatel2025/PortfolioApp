@@ -1,6 +1,16 @@
 const Projects = require("../models/projects");
 
 
+exports.getallprojects = async (req, res) => {
+  try {
+    const projects = await Projects.find();
+    res.status(201).json(projects);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
+
 exports.createprojects = async (req, res) => {
 
   const projects = new Projects({
@@ -28,17 +38,9 @@ exports.createprojects = async (req, res) => {
   }
 };
 
-exports.getallprojects = async (req, res) => {
-  try {
-    const projects = await Projects.find();
-    res.json(projects);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-};
 
-exports.getbyid = async (req, res, next) => {
-  res.json(res.project);
+exports.getbyid = async (req, res) => {
+  res.status(201).json(res.project);
 };
 
 exports.editbyid = async (req, res) => {
@@ -69,7 +71,7 @@ exports.editbyid = async (req, res) => {
 exports.deletebyid = async (req, res) => {
   try {
     await res.project.remove();
-    res.json({ message: "delete" });
+    res.status(200).json({ message: "delete" });
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -78,11 +80,11 @@ exports.deletebyid = async (req, res) => {
 exports.imageup = (req, res, next) => {
   console.log(req.file)
   try {
-    return res.status(201).json({
+    res.status(201).json({
       message: "File uploded successfully",
     });
   } catch (error) {
-    console.error(error);
+    res.status(500).json({ message: err.message });
   }
 };
 
