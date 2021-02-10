@@ -2,10 +2,6 @@ const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
 const certificationSchema = new Schema({
-  cert_image_logo: {
-    type: String,
-    default: null,
-  },
   cert_name: {
     type: String,
   },
@@ -21,7 +17,7 @@ const certificationSchema = new Schema({
     type: String,
     default: null,
   },
-  date: { type: Date },
+  receive_date: { type: Date },
 });
 
 const Modelclass = mongoose.model("certifacation", certificationSchema);

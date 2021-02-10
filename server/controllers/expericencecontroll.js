@@ -1,6 +1,6 @@
 const Experience = require("../models/experience");
 
-exports.getallexperience = async (req, res) => {
+exports.getallExperience = async (req, res) => {
   try {
     const exprericence = await Experience.find();
     res.status(201).json(exprericence);
@@ -11,7 +11,7 @@ exports.getallexperience = async (req, res) => {
   }
 };
 
-exports.createexperience = async (req, res) => {
+exports.createExperience = async (req, res) => {
   const experience = new Experience({
     comp_name: req.body.comp_name,
     comp_position: req.body.comp_position,
@@ -36,12 +36,12 @@ exports.getbyid = async (req, res) => {
 
 exports.editbyid = async (req, res) => {
   if (req.body.comp_name != null) {
-    (res.experience.comp_name = req.body.comp_name),
-    (res.experience.comp_position = req.body.comp_position),
-    (res.experience.comp_job_description = req.body.comp_job_description),
-    (res.experience.comp_duration = req.body.comp_duration),
-      (res.experience.comp_start_date = req.body.comp_start_date),
-      (res.experience.comp_end_date = req.body.comp_end_date);
+    res.experience.comp_name = req.body.comp_name;
+    res.experience.comp_position = req.body.comp_position;
+    res.experience.comp_job_description = req.body.comp_job_description;
+    res.experience.comp_duration = req.body.comp_duration;
+    res.experience.comp_start_date = req.body.comp_start_date;
+    res.experience.comp_end_date = req.body.comp_end_date;
   }
   try {
     const updatedexperience = await res.experience.save();
@@ -53,7 +53,8 @@ exports.editbyid = async (req, res) => {
 
 exports.deletebyid = async (req, res) => {
   try {
-    await res.status(200).experience.remove();
+    await res.experience.remove();
+    res.status(200).json({ message: "delete" });
   } catch (error) {
     res.status(500).json({ message: err.message });
   }

@@ -1,6 +1,6 @@
-const mongoose = require("mongoose ");
+const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
-const Modelclass = require("./projects");
+
 
 const contactSchema = new Schema({
   cont_name: {

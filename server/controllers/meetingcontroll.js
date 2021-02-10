@@ -1,9 +1,9 @@
-const Contacts = require("../models/contact");
+const Meeting = require("../models/meeting");
 
-exports.getallcontact = async (req, res) => {
+exports.getallMeeting = async (req, res) => {
   try {
-    const contact = await Contacts.find();
-    res.status(201).json(contact);
+    const meeting = await Meeting.find();
+    res.status(201).json(meeting);
   } catch (error) {
     res.status(400).json({
       message: error.message,
@@ -11,16 +11,16 @@ exports.getallcontact = async (req, res) => {
   }
 };
 
-exports.createcontact = async (req, res) => {
-  const contact = new Contact({
-    cont_name: req.body.cost_name,
-    cont_email: req.body.cost_email,
-    cont_message: req.body.cont_message,
-    cont_date: req.body.cont_date,
+exports.createMeeting = async (req, res) => {
+  const meeting = new Meeting({
+    meet_name: req.body.meet_name,
+    meet_email: req.body.meet_email,
+    meet_message: req.body.meet_message,
+    meet_date: req.body.meet_date,
   });
   try {
-    const newContant = await res.contact.save();
-    res.status(201).json(newContant);
+    const newMeeting = await meeting.save();
+    res.status(201).json(newMeeting);
   } catch (error) {
     res.status(400).json({
       message: error.message,
@@ -29,18 +29,18 @@ exports.createcontact = async (req, res) => {
 };
 
 exports.getbyid = async (req, res) => {
-  res.status(201).json(res.contact);
+  res.status(201).json(res.meeting);
 };
 
 exports.editbyid = async (req, res) => {
-  if (req.body.cont_name != null) {
-    res.contact.cont_name = req.contact.cont_name;
-    res.contact.cont_email = req.contact.cont_email;
-    res.contact.cont_date = req.contact.cont_date;
+  if (req.body.meet_name != null) {
+    res.meeting.meet_name = req.body.meet_name;
+    res.meeting.meet_email = req.body.meet_email;
+    res.meeting.meet_date = req.body.meet_date;
   }
   try {
-    const updatecontact = await res.contact.save();
-    res.json(updatecontact);
+    const updatemeeting = await res.meeting.save();
+    res.json(updatemeeting);
   } catch (err) {
     res.status(400).json({
       message: err.message,
@@ -50,7 +50,8 @@ exports.editbyid = async (req, res) => {
 
 exports.detetebyid = async (req, res) => {
   try {
-    await res.contact.remove();
+    await res.meeting.remove();
+    res.status(200).json({ message: "delete" });
   } catch (error) {
     res.status(400).json({
       message: error.message,

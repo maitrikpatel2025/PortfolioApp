@@ -13,12 +13,10 @@ exports.getallcertification = async (req, res) => {
 
 exports.createcertification = async (req, res) => {
   const certification = new Certification({
-    cert_image_logo: req.file.cert_image_logo,
     cert_name: req.body.cert_name,
     name_link: req.body.name_link,
     institute: req.body.institute,
-    institute_link: req.body,
-    institute_link,
+    institute_link: req.body.institute_link,
     receive_date: req.body.receive_date,
   });
   try {
@@ -38,9 +36,9 @@ exports.getbyid = async (req, res) => {
 exports.editbyid = async (req, res) => {
   if (req.body.cert_name != null) {
     res.certification.cert_name = req.body.cert_name;
-    res.certification.cert_image_logo = req.file.cert_image_logo;
+    res.certification.name_link = req.body.name_link;
     res.certification.institute = req.body.institute;
-    res.certification.institute_link = req.body.institute;
+    res.certification.institute_link = req.body.institute_link;
     res.certification.receive_date = req.body.receive_date;
   }
   try {
@@ -54,6 +52,7 @@ exports.editbyid = async (req, res) => {
 exports.deletebyid = async (req, res) => {
   try {
     await res.status(200).certification.remove();
+    res.status(200).json({ message: "delete" });
   } catch (error) {
     res.status(500).json({ message: err.message });
   }

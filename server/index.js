@@ -51,6 +51,10 @@ require("./routes/projectsRoutes")(app);
 require("./routes/skillsRoutes")(app);
 require("./routes/miniprojectsRoutes")(app);
 require("./routes/voluteerexperince")(app);
+require("./routes/meetingRoutes")(app);
+require("./routes/contactRoutes")(app);
+require("./routes/experinceRoutes")(app);
+require("./routes/certificationRoutes")(app);
 
 //Server Setup
 const PORT = process.env.PORT || 5080;

@@ -1,4 +1,4 @@
-const meeting = require("../models/meeting");
+const Meeting = require("../models/meeting");
 
 exports.getMeeting = async (req, res, next) => {
   let meeting;
