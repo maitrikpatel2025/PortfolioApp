@@ -4,7 +4,7 @@ const { Schema } = require("mongoose");
 
 const skillsSchema = new Schema({
   skills_title: { type: String },
-  skills: [{ type: String, default: null }],
+  skills_list: [{ type: String, default: null }],
 });
 
 const Modelclass = mongoose.model("skills", skillsSchema);

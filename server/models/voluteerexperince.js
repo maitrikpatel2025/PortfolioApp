@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const {Schema} = require('mongoose');
 
-const voluteer_expericenceSchema = new Schema({
+const voluteerExperienceSchema = new Schema({
     comp_name :{
         type:String,
     },
@@ -23,6 +23,6 @@ const voluteer_expericenceSchema = new Schema({
 
 })
 
-Modelclass = mongoose.model('vol_expericence',voluteer_expericenceSchema)
+Modelclass = mongoose.model('voluteerExperience',voluteerExperienceSchema)
 
 module.exports = Modelclass

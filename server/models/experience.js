@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const { Schema } = require("mongoose");
 
-const expericenceSchema = new Schema({
+const ExperienceSchema = new Schema({
   comp_name: {
     type: String,
   },
@@ -25,6 +25,6 @@ const expericenceSchema = new Schema({
   },
 });
 
-Modelclass = mongoose.model("expericence", expericenceSchema);
+Modelclass = mongoose.model("Experience", ExperienceSchema);
 
 module.exports = Modelclass;
