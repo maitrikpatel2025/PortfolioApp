@@ -14,7 +14,7 @@ exports.getallskills = async (req, res) => {
 exports.createskills = async (req, res) => {
   const skills = new Skills({
     skills_title: req.body.skills_title,
-    skills_list: req.body.skills,
+    skills_list: req.body.skills_list,
   });
   try {
     const newskills = await skills.save();
@@ -33,6 +33,7 @@ exports.getbyid = async (req, res) => {
 exports.editbyid = async (req, res) => {
   if (req.body.skills_title != null) {
     res.skills.skills_title = req.body.skills_title;
+    res.skills.skills_list = req.body.skills_list;
   }
   try {
     const updatedskill = await res.skills.save();
@@ -47,6 +48,7 @@ exports.editbyid = async (req, res) => {
 exports.deletebyid = async (req, res) => {
   try {
     await res.status(200).skills.remove();
+    res.status(200).json({ message: "delete" });
   } catch (error) {
     res.status(500).json({ message: err.message });
   }

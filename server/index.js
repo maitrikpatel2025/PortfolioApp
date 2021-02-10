@@ -48,6 +48,7 @@ app.use(
 
 require("./routes/authRoutes")(app);
 require("./routes/projectsRoutes")(app);
+require("./routes/skillsRoutes")(app);
 
 //Server Setup
 const PORT = process.env.PORT || 5080;
