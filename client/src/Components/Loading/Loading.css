@@ -1,0 +1,13 @@
+.Loading {
+  display: flex;
+  flex-direction: column;
+  height: calc(80vh - 65px);
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  z-index: 9999;
+}
+
+.Loading img {
+  max-width: 400px;
+}
