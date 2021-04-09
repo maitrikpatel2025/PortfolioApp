@@ -1,15 +1,15 @@
-import { TOGGLE_MENU} from "../Action/types";
+import { IS_ADMIN } from "../Action/types";
 
 const InitialState = {
-  isMenuOpen: false,
+  isAdminOpen: false,
 };
 
 export default (state = InitialState, action) => {
   switch (action.type) {
-    case TOGGLE_MENU:
+    case IS_ADMIN:
       return {
         ...state,
-        isMenuOpen: !state.isMenuOpen,
+        isAdminOpen: !state.isAdminOpen,
       };
     default:
       return state;

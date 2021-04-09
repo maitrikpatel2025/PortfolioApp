@@ -44,7 +44,9 @@ class NavBar extends Component {
 
     return (
       <div className="navigation-menu">
-        <TopNav />
+        <div className="show-topnav">
+          <TopNav/>
+        </div>
         {isMenuOpen ? (
           <CloseIcons onClick={toggleMenu} />
         ) : (

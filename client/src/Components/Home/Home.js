@@ -2,6 +2,8 @@ import React from "react";
 import Image from "../../Assets/Rectangle 73.svg";
 import LandingAnimation from "../SvgAnimations/LandingAnimation";
 
+import './Home.css'
+
 const Home = () => {
   return (
     <div className="Home">
