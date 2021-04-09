@@ -63,7 +63,7 @@ class NavBar extends Component {
                     borderBottom: "2px solid #000000",
                   }}
                 >
-                  <li onClick={toggleMenu}>{link.name}</li>
+                  <li key={link.name} onClick={toggleMenu}>{link.name}</li>
                 </NavLink>
               ))
             : ""}

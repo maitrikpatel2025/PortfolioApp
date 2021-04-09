@@ -1,7 +1,6 @@
 import React, { Component, useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 
-import * as actions from "./Action/admin";
 
 import Admin from "./Components/Admin/Admin";
 import Home from "./Components/Home/Home";

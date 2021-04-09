@@ -9,15 +9,16 @@ class AdminNav extends Component {
         if (this.props.authenticated) {
             return (
                 <div className="container">
-                    <div className="col px-2 bg-light border">
-                        <nav class="nav justify-content-center m-2">
+                    <div className="col px-3 bg-light border">
+                        <nav style={{ color: "black" }} className="nav  m-2 justify-content-center " >
                             {links.map((link) => (
 
                                 <NavLink
+                                    key={link.name}
                                     to={link.to}
                                     activeClassName={link.activeClassName}
                                     activeStyle={{
-                                        backgroundColor: "#0d6efd",
+                                        backgroundColor: "#6f42c1",
                                         color: "white",
                                         borderRadius: "5px"
                                     }}
@@ -52,4 +53,4 @@ function mapStateToProps(state) {
     return { authenticated: state.auth.authenticated };
 }
 
-export default connect(mapStateToProps)(AdminNav);
+export default connect(mapStateToProps, null)(AdminNav);
