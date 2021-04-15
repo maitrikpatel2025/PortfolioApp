@@ -1,5 +1,4 @@
 import _                    from 'lodash';
-
 import {
   CREATE_PROJECT,
   FETCH_PROJECTS,
@@ -14,13 +13,13 @@ export default (state = {}, action) => {
     switch (action.type) {
 
         case FETCH_PROJECTS:
-           return { ...state, ..._.mapKeys(action.payload, 'id')}; 
+           return { ...state, ..._.mapKeys(action.payload, '_id')}; 
         case FETCH_PROJECT:
-            return{...state,[action.payload.id]: action.payload};
+            return{...state,[action.payload._id]: action.payload};
         case CREATE_PROJECT:
-            return{...state,[action.payload.id]: action.payload};
+            return{...state,[action.payload._id]: action.payload};
         case EDIT_PROJECT:
-            return{...state,[action.payload.id]: action.payload};
+            return{...state,[action.payload._id]: action.payload};
         case DELETE_PROJECT:
             return _.omit(state,action.payload);
         default:

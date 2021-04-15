@@ -10,12 +10,14 @@ import AdminNav from "./Components/AdminNav/AdminNav";
 import history from "./history";
 import SignOut from "./Components/SignOut/SignOut";
 import SignIn from "./Components/SignIn/SignIn";
-import Projects from "./Components/Manager/Projects/Projects";
+
+import ProjectsAdd from "./Components/Manager/Projects/ProjectsAdd";
+import ProjectsEdit from "./Components/Manager/Projects/ProjectsEdit";
+import ProjectsList from "./Components/Manager/Projects/ProjectsList";
 
 
 class App extends Component {
-  render()
-  {
+  render() {
     return (
       <div className="App">
         <Router history={history}>
@@ -29,10 +31,12 @@ class App extends Component {
             </Switch>
             < Route path="/admin" component={Admin} />
             <div className="Page">
-            <Route path='/' exact component={Home} />
-            <Route path='/manager/login'  component={SignIn} />
-            <Route path="/logout" component={SignOut} />
-            <Route path="/admin/projects" component={Projects} />
+              <Route path='/' exact component={Home} />
+              <Route path='/manager/login' component={SignIn} />
+              <Route path="/logout" component={SignOut} />
+              <Route path="/admin/projects" exact component={ProjectsList} />
+              <Route path="/admin/projects/new" exact component={ProjectsAdd} />
+              <Route path="/admin/projects/edit/:id" exact component={ProjectsEdit} />
             </div>
           </div>
         </Router>

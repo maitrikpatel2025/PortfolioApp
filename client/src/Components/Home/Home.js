@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../../Assets/Rectangle 73.svg";
+import Footer from "../Footer/Footer";
 import LandingAnimation from "../SvgAnimations/LandingAnimation";
 
 import './Home.css'
@@ -32,6 +33,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };

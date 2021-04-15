@@ -32,10 +32,6 @@ const projectsSchema = new Schema({
     type: Date,
     default: null,
   },
-  image: {
-    type: String,
-    default: null,
-  },
   git_link: {
     type: String,
     default: null,

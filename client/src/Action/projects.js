@@ -8,12 +8,10 @@ import {
   EDIT_PROJECT
 } from './types';
 
-export const createProject = formValues => async (dispatch, getState) => {
-    const { userId } = getState().auth;
-    const response = await project.post('/project/add', { ...formValues, userId });
-  
+export const createProject = formValues => async (dispatch) => {
+    const response = await project.post('/project/add', { ...formValues });
     dispatch({ type: CREATE_PROJECT, payload: response.data });
-    history.push('/');
+    history.push('/admin/projects');
   };
   
   export const fetchProjects = () => async dispatch => {
@@ -22,22 +20,22 @@ export const createProject = formValues => async (dispatch, getState) => {
     dispatch({ type: FETCH_PROJECTS, payload: response.data });
   };
   
-  export const fetchProject = id => async dispatch => {
-    const response = await project.get(`/project/${id}`);
+  export const fetchProject = _id => async dispatch => {
+    const response = await project.get(`/project/${_id}`);
   
     dispatch({ type: FETCH_PROJECT, payload: response.data });
   };
   
-  export const editProject = (id, formValues) => async dispatch => {
-    const response = await project.patch(`/project/${id}`, formValues);
+  export const editProject = (_id, formValues) => async dispatch => {
+    const response = await project.put(`/project/${_id}`, formValues);
   
     dispatch({ type: EDIT_PROJECT, payload: response.data });
-    history.push('/');
+    history.push('/admin/projects');
   };
   
-  export const deleteProject = id => async dispatch => {
-    await project.delete(`/project/${id}`);
+  export const deleteProject = _id => async dispatch => {
+    await project.delete(`/project/${_id}`);
   
-    dispatch({ type: DELETE_PROJECT, payload: id });
-    history.push('/');
+    dispatch({ type: DELETE_PROJECT, payload: _id });
+    history.push('/admin/projects');
   };

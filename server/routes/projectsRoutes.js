@@ -10,14 +10,12 @@ module.exports = function (app) {
   app.get("/project", projectscontroll.getallprojects);
   app.post(
     "/project/add",
-    imageuploadmiddle.upload.single("image"),
     projectscontroll.createprojects
   );
   app.get("/project/:id", projectsmiddle.getProject, projectscontroll.getbyid);
   app.put(
     "/project/:id",
     projectsmiddle.getProject,
-    imageuploadmiddle.upload.single("image"),
     projectscontroll.editbyid
   );
   app.delete(
