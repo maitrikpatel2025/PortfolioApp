@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import { Router, Route, Switch } from "react-router-dom";
 
 
@@ -6,7 +6,6 @@ import Admin from "./Components/Admin/Admin";
 import Home from "./Components/Home/Home";
 
 import NavBar from "./Components/NavBar/NavBar";
-import AdminNav from "./Components/AdminNav/AdminNav";
 import history from "./history";
 import SignOut from "./Components/SignOut/SignOut";
 import SignIn from "./Components/SignIn/SignIn";
@@ -14,6 +13,7 @@ import SignIn from "./Components/SignIn/SignIn";
 import ProjectsAdd from "./Components/Manager/Projects/ProjectsAdd";
 import ProjectsEdit from "./Components/Manager/Projects/ProjectsEdit";
 import ProjectsList from "./Components/Manager/Projects/ProjectsList";
+import ProjectsDelete from "./Components/Manager/Projects/ProjectsDelete";
 
 
 class App extends Component {
@@ -24,9 +24,9 @@ class App extends Component {
           <div>
             <Switch>
               < Route path="/" exact component={NavBar} />
-              < Route path="/about" exact component={NavBar} />
-              < Route path="/projects" exact component={NavBar} />
-              < Route path="/experience" exact component={NavBar} />
+              < Route path="/story" exact component={NavBar} />
+              < Route path="/works" exact component={NavBar} />
+              < Route path="/capabilities" exact component={NavBar} />
               < Route path="/contact" exact component={NavBar} />
             </Switch>
             < Route path="/admin" component={Admin} />
@@ -37,6 +37,11 @@ class App extends Component {
               <Route path="/admin/projects" exact component={ProjectsList} />
               <Route path="/admin/projects/new" exact component={ProjectsAdd} />
               <Route path="/admin/projects/edit/:id" exact component={ProjectsEdit} />
+              <Route
+                path="/admin/projects/delete/:id"
+                exact
+                component={ProjectsDelete}
+              />
             </div>
           </div>
         </Router>

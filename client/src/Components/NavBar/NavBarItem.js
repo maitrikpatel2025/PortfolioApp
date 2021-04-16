@@ -1,17 +1,17 @@
 export const links = [
   {
-    to: "/about",
-    name: "About Me",
+    to: "/story",
+    name: "Story",
     
   },
   {
-    to: "/projects",
-    name: "Projects",
+    to: "/works",
+    name: "Works",
     activeClassName: "active",
   },
   {
-    to: "/experience",
-    name: "Experience",
+    to: "/capabilities",
+    name: "Capabilities",
     activeClassName: "active",
   },
   {

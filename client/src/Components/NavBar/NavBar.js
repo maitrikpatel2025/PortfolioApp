@@ -7,6 +7,7 @@ import CloseIcons from "../Icons/CloseIcons";
 import { NavLink } from "react-router-dom";
 import MenuIcons from "../Icons/MenuIcons";
 import TopNav from "../TopNav/TopNav";
+import Logo from "../Logo/Logo";
 
 const Ul = styled.ul`
   display: none;
@@ -16,7 +17,7 @@ const Ul = styled.ul`
     display: inline-block;
     flex-flow: column nowrap;
     background-color: #ffffff;
-    opacity: 0.9;
+    opacity: 1;
     position: fixed;
     top: 0;
     right: 0;
@@ -26,6 +27,7 @@ const Ul = styled.ul`
     padding-left: 80px;
     padding-top: 80px;
     transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     li {
       padding: 18px 10px;
       display: flex;
@@ -45,7 +47,7 @@ class NavBar extends Component {
     return (
       <div className="navigation-menu">
         <div className="show-topnav">
-          <TopNav/>
+          <TopNav />
         </div>
         {isMenuOpen ? (
           <CloseIcons onClick={toggleMenu} />
@@ -53,8 +55,9 @@ class NavBar extends Component {
           <MenuIcons onClick={toggleMenu} />
         )}
         <Ul isMenuOpen>
-          {isMenuOpen
-            ? links.map((link) => (
+
+            {isMenuOpen
+              ? links.map((link) => (
                 <NavLink
                   to={link.to}
                   activeClassName={link.activeClassName}
@@ -66,8 +69,10 @@ class NavBar extends Component {
                   <li key={link.name} onClick={toggleMenu}>{link.name}</li>
                 </NavLink>
               ))
-            : ""}
+              : ""}
+    
         </Ul>
+
       </div>
     );
   }

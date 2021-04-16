@@ -4,7 +4,6 @@ import { NavLink } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 import { links } from "../NavBar/NavBarItem";
-import ColorChange from "../Button/ColorChange";
 
 const Nav = styled.nav`
   width: 100%;
@@ -13,9 +12,8 @@ const Nav = styled.nav`
   background-color: #00000;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   ul {
-    padding-right: 100px;
+    padding-right: 200px;
     display: flex;
     list-style: none;
     display: flex;
@@ -25,7 +23,8 @@ const Nav = styled.nav`
   }
   li {
     padding: 30px;
-    color: #000000;
+	  font-size:14px;
+    color: #656B8E;
     font-weight: 600;
     font-size: 15px;
     opacity: 1;
@@ -35,7 +34,7 @@ const Nav = styled.nav`
     padding: 20px 0;
     padding-left: 120px;
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 700px) {
     ul {
       display: none;
     }
@@ -56,11 +55,11 @@ const TopNav = () => {
         <ul>
           {links.map((link) => (
             <NavLink
+            key={link.name}
               to={link.to}
               activeClassName={link.activeClassName}
               activeStyle={{
-                fontWeight: "bold",
-                borderBottom: "2px solid black",
+                borderBottom: "2px solid #656B8E",
               }}
             >
               <li>{link.name}</li>

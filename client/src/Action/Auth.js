@@ -1,6 +1,5 @@
 import { AUTH_USER, AUTH_ERROR } from './types';
 import authapi from '../Api/authapi';
-import History             from "../history";
 
 export const signup = (formProps, callback) => async dispatch => {
     try {
@@ -39,5 +38,4 @@ export const signout = () => {
         type: AUTH_USER,
         payload: ''
     };
-    History.push('/')
-};
+}

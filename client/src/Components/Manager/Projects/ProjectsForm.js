@@ -11,7 +11,7 @@ class ProjectsForm extends Component {
             paddingBottom: "10px",
             fontSize: "20px",
         };
-        return (<div className="field">
+        return (<div className="field grey">
             <label style={mystyle}>{label}</label>
             <button className="ui right floated primary button" onClick={() => fields.push()}>Add {label}</button>
             <div className="row">
@@ -188,6 +188,6 @@ const validate = (formValues) => {
 
 
 export default reduxForm({
-    form: "StreamForm",
+    form: "ProjectsForm",
     validate
 })(ProjectsForm);

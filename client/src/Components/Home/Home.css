@@ -1,0 +1,130 @@
+
+.mainbox {
+    padding-bottom:40px;
+}
+
+.img_animat1{
+    animation: drop-2 5s forwards;
+}
+.header_tagline{
+    position: relative;
+    top: 100px;
+    font-family:Lato;
+	text-align:left;
+	font-size:64px;
+    font-weight: 501;
+    line-height: 1.4;
+}
+.tagline{
+    color: #FE4B57;
+}
+.header_intro{
+    position: relative;
+    padding-top:110px;
+}
+.lbtn{
+    position: relative;
+    top: 12px;
+    left: 18px;
+}
+.intro{ 
+	color:#0F1221;
+	font-family:Lato;
+	text-align:left;
+    font-weight: 200;
+	font-size:15px;
+    line-height: 35px;
+}
+
+.layout2{
+    padding: 30px;
+    width: 100%;
+    background-color: #E4F2FF;
+}
+
+.layout2_tagline{
+    position: relative;
+    top: 100px;
+    font-family:Lato;
+	text-align:left;
+	font-size:24px;
+    text-transform: uppercase;
+    font-weight:bold;
+    line-height: 1.4;
+    letter-spacing: 2px
+}
+.layout2_tagline2{
+    color: #562AF0;
+}
+.layout2_header_intro{
+   position: relative;
+   padding-top : 110px;
+   font-weight:normal;
+   font-size:18px;
+  
+   letter-spacing: 2px
+}
+.layout2_intro{
+    padding-bottom: 20px; 
+    line-height: 35px;
+
+}
+.layout2_card{ 
+    position:absolute;
+	top:-50px;
+}
+.layout3_card1 { 
+	box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
+	background-color:#FFFFFF;
+	width: 250px;
+    height: 250px;
+	position:absolute;
+	left:0px;
+	top:172px;
+}
+.layout3_card2 { 
+	box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
+	background-color:#FFFFFF;
+	width: 250px;
+    height: 250px;
+	position:absolute;
+	left:300px;
+	top:0px;
+}
+.layout3_card3 { 
+	box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
+	background-color:#FFFFFF;
+	width: 250px;
+    height: 250px;
+	position:absolute;
+	left:300px;
+	top:300px;
+}
+
+@keyframes drop-2 {
+    0% {
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+@media only screen and (max-width: 900px) {
+    .header_text{
+        position: relative;
+        left: 80px;
+    }
+    .header_intro{
+        position: relative;
+        left: 80px;
+    }
+    .header_tagline{
+        text-align:center;
+    }
+    .lbtn{
+        position: relative;
+        left: 80px;
+    }
+    
+}
