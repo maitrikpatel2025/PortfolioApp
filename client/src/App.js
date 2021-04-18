@@ -14,6 +14,7 @@ import ProjectsAdd from "./Components/Manager/Projects/ProjectsAdd";
 import ProjectsEdit from "./Components/Manager/Projects/ProjectsEdit";
 import ProjectsList from "./Components/Manager/Projects/ProjectsList";
 import ProjectsDelete from "./Components/Manager/Projects/ProjectsDelete";
+import Story from "./Components/Story/Story";
 
 
 class App extends Component {
@@ -32,6 +33,7 @@ class App extends Component {
             < Route path="/admin" component={Admin} />
             <div className="Page">
               <Route path='/' exact component={Home} />
+              <Route path='/story' exact component={Story} />
               <Route path='/manager/login' component={SignIn} />
               <Route path="/logout" component={SignOut} />
               <Route path="/admin/projects" exact component={ProjectsList} />

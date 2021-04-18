@@ -61,44 +61,98 @@
    padding-top : 110px;
    font-weight:normal;
    font-size:18px;
-  
-   letter-spacing: 2px
 }
 .layout2_intro{
     padding-bottom: 20px; 
     line-height: 35px;
 
 }
-.layout2_card{ 
+.Box{
+    padding-bottom: 150px;
+}
+.layout3_text{
+    position: relative;
+    padding-right: 20px;
+}
+.layout3_text_header{
+    position: relative;
+    top: 50px;
+    color: #FE4B57;
+    font-weight:bold;
+    line-height: 1.4;
+    letter-spacing: 2px;
+    font-size:20px;
+}
+.layout3_tagline{
+    position: relative;
+    top: 80px;
+    font-family:Lato;
+	text-align:left;
+	font-size:56px;
+    text-transform: uppercase;
+    font-weight:bold;
+    line-height: 1.4;
+    letter-spacing: 2px;
+
+}
+.layout3_card{ 
     position:absolute;
 	top:-50px;
 }
+.layout3_header_intro{
+    color: #656B8E;
+    position: relative;
+    padding-top : 110px;
+    padding-bottom : 20px;
+    font-weight:normal;
+    font-size:20px;
+    padding-right: 90px;
+}
+
 .layout3_card1 { 
 	box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
 	background-color:#FFFFFF;
-	width: 250px;
-    height: 250px;
+	width: 280px;
+    height: 280px;
 	position:absolute;
 	left:0px;
 	top:172px;
+    padding: 20px;
 }
 .layout3_card2 { 
 	box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
 	background-color:#FFFFFF;
-	width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
 	position:absolute;
-	left:300px;
+	left:330px;
 	top:0px;
+    padding: 20px;
 }
 .layout3_card3 { 
 	box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
 	background-color:#FFFFFF;
-	width: 250px;
-    height: 250px;
+    width: 280px;
+    height: 280px;
 	position:absolute;
-	left:300px;
-	top:300px;
+	left:330px;
+	top:330px;
+    padding: 20px;
+}
+.layout3_card_header{
+    text-align:left;
+	font-size:20px;
+    font-weight:bold;
+    line-height: 0.8;
+    letter-spacing: 1.2px
+}
+.layout3_card_intro{
+    font-weight:normal;
+    font-size:18px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #656B8E;
+    padding-top: 5px;
 }
 
 @keyframes drop-2 {
@@ -125,6 +179,9 @@
     .lbtn{
         position: relative;
         left: 80px;
+    }
+    .layout2{
+        width: 100%;
     }
     
 }
