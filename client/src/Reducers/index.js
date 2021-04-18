@@ -2,9 +2,14 @@ import { combineReducers } from "redux";
 import { reducer as formReducer } from "redux-form";
 import adminReducer from "./adminReducer";
 import authReducer from "./authReducer";
+import contactsReducer from "./contactsReducer";
+import experienceReducer from "./experienceReducer";
+import meetingReducer from "./meetingReducer";
 import miniProjectsReducer from "./miniProjectsReducer";
 import navigationReducer from "./navigationReducer";
 import projectReducer from "./projectReducer";
+import skillsReducer from "./skillsReducer";
+import voluteerExperienceReducer from "./voluteerExperienceReducer";
 
 export default combineReducers({
   navigation: navigationReducer,
@@ -12,5 +17,10 @@ export default combineReducers({
   admin: adminReducer,
   auth: authReducer,
   project: projectReducer,
-  miniproject: miniProjectsReducer
+  miniProject: miniProjectsReducer,
+  skill : skillsReducer,
+  experience: experienceReducer,
+  voluteerExperience: voluteerExperienceReducer,
+  contact: contactsReducer,
+  meeting:meetingReducer
 });

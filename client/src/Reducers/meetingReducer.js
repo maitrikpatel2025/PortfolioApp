@@ -1,10 +1,10 @@
 import _                    from 'lodash';
 import {
-  CREATE_EXPERIENCE,
-  FETCH_EXPERIENCES,
-  FETCH_EXPERIENCE,
-  EDIT_EXPERIENCE,
-  DELETE_EXPERIENCE,
+  CREATE_MEETING,
+  FETCH_MEETINGS,
+  FETCH_MEETING,
+  EDIT_MEETING,
+  DELETE_MEETING,
 }                           from "../Action/types";
 
 
@@ -12,15 +12,15 @@ export default (state = {}, action) => {
 
     switch (action.type) {
 
-        case FETCH_EXPERIENCES:
+        case FETCH_MEETINGS:
            return { ...state, ..._.mapKeys(action.payload, '_id')}; 
-        case FETCH_EXPERIENCE:
+        case FETCH_MEETING:
             return{...state,[action.payload._id]: action.payload};
-        case CREATE_EXPERIENCE:
+        case CREATE_MEETING:
             return{...state,[action.payload._id]: action.payload};
-        case EDIT_EXPERIENCE:
+        case EDIT_MEETING:
             return{...state,[action.payload._id]: action.payload};
-        case DELETE_EXPERIENCE:
+        case DELETE_MEETING:
             return _.omit(state,action.payload);
         default:
             return state;
