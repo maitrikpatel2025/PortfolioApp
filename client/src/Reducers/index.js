@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { reducer as formReducer } from "redux-form";
 import adminReducer from "./adminReducer";
 import authReducer from "./authReducer";
+import miniProjectsReducer from "./miniProjectsReducer";
 import navigationReducer from "./navigationReducer";
 import projectReducer from "./projectReducer";
 
@@ -10,5 +11,6 @@ export default combineReducers({
   form: formReducer,
   admin: adminReducer,
   auth: authReducer,
-  project: projectReducer
+  project: projectReducer,
+  miniproject: miniProjectsReducer
 });
