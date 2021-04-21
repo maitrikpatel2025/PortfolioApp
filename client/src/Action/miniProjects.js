@@ -11,7 +11,7 @@ import {
 export const createMiniProject = formValues => async (dispatch) => {
     const response = await MiniProject.post('miniprojects/add', { ...formValues });
     dispatch({ type: CREATE_MINI_PROJECT, payload: response.data });
-    history.push('/admin/miniproject');
+    history.push('/admin/miniprojects');
   };
   
   export const fetchMiniProjects = () => async dispatch => {
@@ -30,12 +30,12 @@ export const createMiniProject = formValues => async (dispatch) => {
     const response = await MiniProject.put(`miniprojects/${_id}`, formValues);
   
     dispatch({ type:EDIT_MINI_PROJECT, payload: response.data });
-    history.push('/admin/miniproject');
+    history.push('/admin/miniprojects');
   };
   
   export const deleteMiniProject = _id => async dispatch => {
     await MiniProject.delete(`miniprojects/${_id}`);
   
     dispatch({ type: DELETE_MINI_PROJECT, payload: _id });
-    history.push('/adminminiprojectss');
+    history.push('/admin/miniprojects');
   };

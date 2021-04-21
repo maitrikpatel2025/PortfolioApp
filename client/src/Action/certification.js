@@ -18,7 +18,7 @@ export const createCertification = formValues => async (dispatch) => {
     const response = await certification.get('/certification');
   
     dispatch({ type: FETCH_CERTIFICATIONS, payload: response.data });
-  };
+  };s
   
   export const fetchCertification = _id => async dispatch => {
     const response = await certification.get(`/certification/${_id}`);

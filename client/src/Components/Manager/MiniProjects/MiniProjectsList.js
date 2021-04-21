@@ -4,23 +4,23 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { fetchProjects } from "../../../Action/projects";
+import { fetchMiniProjects } from "../../../Action/miniProjects";
 
 
-class ProjectsList extends Component {
+class MiniProjectsList extends Component {
 
     componentDidMount() {
-        this.props.fetchProjects();
+        this.props.fetchMiniProjects();
     }
 
-    renderAdmin(project) {
+    renderAdmin(miniproject) {
         return (
             <div className="ui two buttons">
-                <Link to={`projects/edit/${project._id}`} className="ui button primary">
+                <Link to={`miniprojects/edit/${miniproject._id}`} className="ui button primary">
                     EDIT
           </Link>
                 <Link
-                    to={`projects/delete/${project._id}`}
+                    to={`miniprojects/delete/${miniproject._id}`}
                     className="ui button negative"
                 >
                     DELETE
@@ -30,18 +30,18 @@ class ProjectsList extends Component {
     }
 
     renderList() {
-        return this.props.projects.map((project) => {
+        return this.props.miniprojects.map((miniproject) => {
             return (
                 <div className="card">
-                    <div className="content" key={project._id}>
+                    <div className="content" key={miniproject._id}>
 
                         <div className="header">
-                            <Link to={`/projects/${project._id}`}>
-                                {project.title}
+                            <Link to={`/miniprojects/${miniproject._id}`}>
+                                {miniproject.title}
                             </Link>
                         </div>
-                        <p className="description">{project.summary}</p>
-                        {this.renderAdmin(project)}
+                        <p className="description">{miniproject.description}</p>
+                        {this.renderAdmin(miniproject)}
 
                     </div>
                 </div>
@@ -53,8 +53,8 @@ class ProjectsList extends Component {
 
         return (
             <div style={{ textAlign: "center", padding: "20px" }}>
-                <Link to={`projects/new`}>
-                    <button className="ui button purple">Add project</button>
+                <Link to={`miniprojects/new`}>
+                    <button className="ui button purple">Add Mini project</button>
                 </Link>
             </div>
         );
@@ -64,7 +64,7 @@ class ProjectsList extends Component {
     render() {
         return (
             <div className="ProjectsList">
-                <h1 style={{ textAlign: "center" }} >List of all project </h1>
+                <h1 style={{ textAlign: "center" }} >List of all Mini Project </h1>
                 {this.renderCreate()}
                 <div className="ui cards">{this.renderList()}</div>
             </div>
@@ -76,9 +76,9 @@ class ProjectsList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        projects: Object.values(state.project),
+        miniprojects: Object.values(state.miniProject),
     };
 };
 
 
-export default connect(mapStateToProps, { fetchProjects })(ProjectsList);
+export default connect(mapStateToProps, { fetchMiniProjects })(MiniProjectsList);

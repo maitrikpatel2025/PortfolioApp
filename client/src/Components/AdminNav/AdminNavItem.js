@@ -15,6 +15,11 @@ export const links = [
         activeClassName: "active",
     },
     {
+        to: "/admin/certification",
+        name: "Certification",
+        activeClassName: "active",
+    },
+    {
         to: "/admin/experience",
         name: "Experience",
         activeClassName: "active",
@@ -32,6 +37,11 @@ export const links = [
     {
         to: "/admin/meeting",
         name: "Zoom Meeting",
+        activeClassName: "active",
+    },
+    {
+        to: "/admin/testimonial",
+        name: "Testimonial",
         activeClassName: "active",
     },
 ];

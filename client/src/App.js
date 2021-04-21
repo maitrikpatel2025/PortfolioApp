@@ -10,11 +10,15 @@ import history from "./history";
 import SignOut from "./Components/SignOut/SignOut";
 import SignIn from "./Components/SignIn/SignIn";
 
-import ProjectsAdd from "./Components/Manager/Projects/ProjectsAdd";
 import ProjectsEdit from "./Components/Manager/Projects/ProjectsEdit";
 import ProjectsList from "./Components/Manager/Projects/ProjectsList";
 import ProjectsDelete from "./Components/Manager/Projects/ProjectsDelete";
 import Story from "./Components/Story/Story";
+import ProjectsAdd from "./Components/Manager/Projects/ProjectsAdd";
+import MiniProjectsList from "./Components/Manager/MiniProjects/MiniProjectsList";
+import MiniProjectsAdd from "./Components/Manager/MiniProjects/MiniProjectsAdd";
+import MiniProjectsEdit from "./Components/Manager/MiniProjects/MiniProjectsEdit";
+import MiniProjectsDelete from "./Components/Manager/MiniProjects/MiniProjectsDelete";
 
 
 class App extends Component {
@@ -39,10 +43,13 @@ class App extends Component {
               <Route path="/admin/projects" exact component={ProjectsList} />
               <Route path="/admin/projects/new" exact component={ProjectsAdd} />
               <Route path="/admin/projects/edit/:id" exact component={ProjectsEdit} />
+              <Route path="/admin/miniprojects" exact component={MiniProjectsList} />
+              <Route path="/admin/miniprojects/new" exact component={MiniProjectsAdd} />
+              <Route path="/admin/miniprojects/edit/:id" exact component={MiniProjectsEdit} />
               <Route
-                path="/admin/projects/delete/:id"
+                path="/admin/miniprojects/delete/:id"
                 exact
-                component={ProjectsDelete}
+                component={MiniProjectsDelete}
               />
             </div>
           </div>

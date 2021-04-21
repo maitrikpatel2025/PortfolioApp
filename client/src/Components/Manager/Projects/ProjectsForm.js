@@ -181,7 +181,7 @@ const validate = (formValues) => {
         error.description = "You must enter a description";
     }
     if (!formValues.duration) {
-        error.description = "You must enter a description";
+        error.duration = "You must enter a description";
     }
     return error;
 };
