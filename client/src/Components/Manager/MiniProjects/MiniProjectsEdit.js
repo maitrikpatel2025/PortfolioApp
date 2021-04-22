@@ -24,7 +24,7 @@ class MiniProjectsEdit extends Component {
                 <div className="ui container">
                     <h1>Edit your Mini projects </h1>
                 </div>
-                <MiniProjectsForm initialValues={_.pick(this.props.miniprojects, 'title', 'description')} onSubmit={this.onSubmit} button="Edit Project" />
+                <MiniProjectsForm initialValues={_.pick(this.props.miniprojects, 'title', 'description')} onSubmit={this.onSubmit} button="Edit Mini Project" />
             </div>
         );
     }

@@ -33,7 +33,7 @@ class MiniProjectsList extends Component {
         return this.props.miniprojects.map((miniproject) => {
             return (
                 <div className="card">
-                    <div className="content" key={miniproject._id}>
+                    <div className="content" key={miniproject.title}>
 
                         <div className="header">
                             <Link to={`/miniprojects/${miniproject._id}`}>

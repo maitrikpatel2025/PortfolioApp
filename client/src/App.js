@@ -19,6 +19,10 @@ import MiniProjectsList from "./Components/Manager/MiniProjects/MiniProjectsList
 import MiniProjectsAdd from "./Components/Manager/MiniProjects/MiniProjectsAdd";
 import MiniProjectsEdit from "./Components/Manager/MiniProjects/MiniProjectsEdit";
 import MiniProjectsDelete from "./Components/Manager/MiniProjects/MiniProjectsDelete";
+import SkillsAdd from "./Components/Manager/Skills/SkillsAdd";
+import SkillsList from "./Components/Manager/Skills/SkillsList";
+import SkillsDelete from "./Components/Manager/Skills/SkillsDelete";
+import SkillsEdit from "./Components/Manager/Skills/SkillsEdit";
 
 
 class App extends Component {
@@ -43,6 +47,11 @@ class App extends Component {
               <Route path="/admin/projects" exact component={ProjectsList} />
               <Route path="/admin/projects/new" exact component={ProjectsAdd} />
               <Route path="/admin/projects/edit/:id" exact component={ProjectsEdit} />
+              <Route
+                path="/admin/projects/delete/:id"
+                exact
+                component={ProjectsDelete}
+              />
               <Route path="/admin/miniprojects" exact component={MiniProjectsList} />
               <Route path="/admin/miniprojects/new" exact component={MiniProjectsAdd} />
               <Route path="/admin/miniprojects/edit/:id" exact component={MiniProjectsEdit} />
@@ -50,6 +59,15 @@ class App extends Component {
                 path="/admin/miniprojects/delete/:id"
                 exact
                 component={MiniProjectsDelete}
+              />
+              
+              <Route path="/admin/skills" exact component={SkillsList} />
+              <Route path="/admin/skills/new" exact component={SkillsAdd} />
+              <Route path="/admin/skills/edit/:id" exact component={SkillsEdit} />
+              <Route
+                path="/admin/skills/delete/:id"
+                exact
+                component={SkillsDelete}
               />
             </div>
           </div>

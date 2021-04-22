@@ -37,7 +37,7 @@ exports.editbyid = async (req, res) => {
   }
   try {
     const updatedskill = await res.skills.save();
-    res.status(400).json(updatedskill);
+    res.json(updatedskill);
   } catch (error) {
     res.status(400).json({
       message: error.message,

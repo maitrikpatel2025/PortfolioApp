@@ -17,7 +17,7 @@ class MiniProjectAdd extends Component {
 
     render() {
         return (
-            <div style={{ padding: "40px" }} className="ProjectAdd">
+            <div style={{ padding: "40px" }} className="Mini Project Add">
                 <div className="ui container">
                     <h1>Create Mini Project </h1>
                 </div>

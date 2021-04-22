@@ -9,32 +9,31 @@ import {
 } from './types';
 
 export const createSkill = formValues => async (dispatch) => {
-    const response = await skill.post('/skill/add', { ...formValues });
+    const response = await skill.post('/skills/add', { ...formValues });
     dispatch({ type: CREATE_SKILL, payload: response.data });
     history.push('/admin/skills');
   };
   
   export const fetchskills = () => async dispatch => {
-    const response = await skill.get('/skill');
+    const response = await skill.get('/skills');
   
     dispatch({ type: FETCH_SKILLS, payload: response.data });
   };
   
   export const fetchSkill = _id => async dispatch => {
-    const response = await skill.get(`/skill/${_id}`);
+    const response = await skill.get(`/skills/${_id}`);
   
     dispatch({ type: FETCH_SKILL, payload: response.data });
   };
   
   export const editSkill = (_id, formValues) => async dispatch => {
-    const response = await skill.put(`/skill/${_id}`, formValues);
-  
+    const response = await skill.put(`/skills/${_id}`, formValues);
     dispatch({ type: EDIT_SKILL, payload: response.data });
     history.push('/admin/skills');
   };
   
   export const deleteSkill = _id => async dispatch => {
-    await skill.delete(`/skill/${_id}`);
+    await skill.delete(`/skills/${_id}`);
   
     dispatch({ type: DELETE_SKILL, payload: _id });
     history.push('/admin/skills');

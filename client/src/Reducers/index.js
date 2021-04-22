@@ -2,6 +2,7 @@ import { combineReducers } from "redux";
 import { reducer as formReducer } from "redux-form";
 import adminReducer from "./adminReducer";
 import authReducer from "./authReducer";
+import certificationReducer from "./certificationReducer";
 import contactsReducer from "./contactsReducer";
 import experienceReducer from "./experienceReducer";
 import meetingReducer from "./meetingReducer";
@@ -19,6 +20,7 @@ export default combineReducers({
   project: projectReducer,
   miniProject: miniProjectsReducer,
   skill : skillsReducer,
+  certification: certificationReducer,
   experience: experienceReducer,
   voluteerExperience: voluteerExperienceReducer,
   contact: contactsReducer,
