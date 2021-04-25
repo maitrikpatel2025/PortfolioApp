@@ -9,33 +9,33 @@ import {
 } from './types';
 
 export const createVoluteerExperience = formValues => async (dispatch) => {
-    const response = await voluteerExperience.post('/voluteerexperienc/add', { ...formValues });
+    const response = await voluteerExperience.post('/voluteerexpericence/add', { ...formValues });
     dispatch({ type: CREATE_VOLUTEER_EXPERIENCE, payload: response.data });
-    history.push('/admin/voluteerexperiencs');
+    history.push('/admin/voluteerexperience');
   };
   
   export const fetchVoluteerExperiences = () => async dispatch => {
-    const response = await voluteerExperience.get('/voluteerexperienc');
+    const response = await voluteerExperience.get('/voluteerexpericence');
   
     dispatch({ type: FETCH_VOLUTEER_EXPERIENCES, payload: response.data });
   };
   
   export const fetchVoluteerExperience = _id => async dispatch => {
-    const response = await voluteerExperience.get(`/voluteerexperienc/${_id}`);
+    const response = await voluteerExperience.get(`/voluteerexpericence/${_id}`);
   
     dispatch({ type: FETCH_VOLUTEER_EXPERIENCE, payload: response.data });
   };
   
   export const editVoluteerExperience = (_id, formValues) => async dispatch => {
-    const response = await voluteerExperience.put(`/voluteerexperienc/${_id}`, formValues);
+    const response = await voluteerExperience.put(`/voluteerexpericence/${_id}`, formValues);
   
     dispatch({ type: EDIT_VOLUTEER_EXPERIENCE, payload: response.data });
-    history.push('/admin/voluteerexperiencs');
+    history.push('/admin/voluteerexperience');
   };
   
   export const deleteVoluteerExperience = _id => async dispatch => {
-    await voluteerExperience.delete(`/voluteerexperienc/${_id}`);
+    await voluteerExperience.delete(`/voluteerexpericence/${_id}`);
   
     dispatch({ type: DELETE_VOLUTEER_EXPERIENCE, payload: _id });
-    history.push('/admin/voluteerexperiencs');
+    history.push('/admin/voluteerexperience');
   };

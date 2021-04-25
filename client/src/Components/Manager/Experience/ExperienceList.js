@@ -4,23 +4,23 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
-import { fetchskills } from "../../../Action/skills";
+import { fetchExperiences } from "../../../Action/experience";
 
 
-class SkillsList extends Component {
+class ExperienceList extends Component {
 
     componentDidMount() {
-        this.props.fetchskills();
+        this.props.fetchExperiences();
     }
 
-    renderAdmin(skill) {
+    renderAdmin(experience) {
         return (
             <div className="ui two buttons">
-                <Link to={`skills/edit/${skill._id}`} className="ui button primary">
+                <Link to={`experience/edit/${experience._id}`} className="ui button primary">
                     EDIT
           </Link>
                 <Link
-                    to={`skills/delete/${skill._id}`}
+                    to={`experience/delete/${experience._id}`}
                     className="ui button negative"
                 >
                     DELETE
@@ -30,18 +30,18 @@ class SkillsList extends Component {
     }
 
     renderList() {
-        return this.props.skills.map((skill) => {
+        return this.props.experiences.map((experience) => {
             return (
                 <div className="card">
-                    <div className="content" key={skill.skills_title}>
+                    <div className="content" key={experience.comp_name}>
 
                         <div className="header">
 
-                            {skill.skills_title}
+                            {experience.comp_name}
 
                         </div>
-                        <p className="description">{skill.skills_list}</p>
-                        {this.renderAdmin(skill)}
+                        <p className="description">{experience.comp_position}</p>
+                        {this.renderAdmin(experience)}
 
                     </div>
                 </div>
@@ -53,8 +53,8 @@ class SkillsList extends Component {
 
         return (
             <div style={{ textAlign: "center", padding: "20px" }}>
-                <Link to={`skills/new`}>
-                    <button className="ui button purple">Add skill</button>
+                <Link to={`experience/new`}>
+                    <button className="ui button purple">Add  Experience</button>
                 </Link>
             </div>
         );
@@ -63,8 +63,8 @@ class SkillsList extends Component {
 
     render() {
         return (
-            <div className="SkillsList">
-                <h1 style={{ textAlign: "center" }} >List of all Skills </h1>
+            <div className="Experience List">
+                <h1 style={{ textAlign: "center" }} >List of all  Experience</h1>
                 {this.renderCreate()}
                 <div className="ui cards">{this.renderList()}</div>
             </div>
@@ -76,9 +76,9 @@ class SkillsList extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        skills: Object.values(state.skill),
+        experiences: Object.values(state.experience),
     };
 };
 
 
-export default connect(mapStateToProps, { fetchskills })(SkillsList);
+export default connect(mapStateToProps, { fetchExperiences })(ExperienceList);

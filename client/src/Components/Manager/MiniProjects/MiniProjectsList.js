@@ -36,9 +36,9 @@ class MiniProjectsList extends Component {
                     <div className="content" key={miniproject.title}>
 
                         <div className="header">
-                            <Link to={`/miniprojects/${miniproject._id}`}>
-                                {miniproject.title}
-                            </Link>
+
+                            {miniproject.title}
+
                         </div>
                         <p className="description">{miniproject.description}</p>
                         {this.renderAdmin(miniproject)}

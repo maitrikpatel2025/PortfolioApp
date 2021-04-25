@@ -23,7 +23,18 @@ import SkillsAdd from "./Components/Manager/Skills/SkillsAdd";
 import SkillsList from "./Components/Manager/Skills/SkillsList";
 import SkillsDelete from "./Components/Manager/Skills/SkillsDelete";
 import SkillsEdit from "./Components/Manager/Skills/SkillsEdit";
-
+import CertificationsList from "./Components/Manager/Certifications/CertificationsList";
+import CertificationsAdd from "./Components/Manager/Certifications/CertificationsAdd";
+import CertificationsEdit from "./Components/Manager/Certifications/CertificationsEdit";
+import CertificationsDelete from "./Components/Manager/Certifications/CertificationsDelete";
+import VoluteerExperienceList from "./Components/Manager/VoluteerExperience/VoluteerExperienceList";
+import VoluteerExperienceAdd from "./Components/Manager/VoluteerExperience/VoluteerExperienceAdd";
+import VoluteerExperienceEdit from "./Components/Manager/VoluteerExperience/VoluteerExperienceEdit";
+import VoluteerExperienceDelete from "./Components/Manager/VoluteerExperience/VoluteerExperienceDelete";
+import ExperienceList from "./Components/Manager/Experience/ExperienceList";
+import ExperienceAdd from "./Components/Manager/Experience/ExperienceAdd";
+import ExperienceEdit from "./Components/Manager/Experience/ExperienceEdit";
+import ExperienceDelete from "./Components/Manager/Experience/ExperienceDelete";
 
 class App extends Component {
   render() {
@@ -42,8 +53,8 @@ class App extends Component {
             <div className="Page">
               <Route path='/' exact component={Home} />
               <Route path='/story' exact component={Story} />
-              <Route path='/manager/login' component={SignIn} />
-              <Route path="/logout" component={SignOut} />
+              <Route path='/manager/login' exact component={SignIn} />
+              <Route path="/logout" exact component={SignOut} />
               <Route path="/admin/projects" exact component={ProjectsList} />
               <Route path="/admin/projects/new" exact component={ProjectsAdd} />
               <Route path="/admin/projects/edit/:id" exact component={ProjectsEdit} />
@@ -60,7 +71,6 @@ class App extends Component {
                 exact
                 component={MiniProjectsDelete}
               />
-              
               <Route path="/admin/skills" exact component={SkillsList} />
               <Route path="/admin/skills/new" exact component={SkillsAdd} />
               <Route path="/admin/skills/edit/:id" exact component={SkillsEdit} />
@@ -68,6 +78,30 @@ class App extends Component {
                 path="/admin/skills/delete/:id"
                 exact
                 component={SkillsDelete}
+              />
+              <Route path="/admin/certifications" exact component={CertificationsList} />
+              <Route path="/admin/certifications/new" exact component={CertificationsAdd} />
+              <Route path="/admin/certifications/edit/:id" exact component={CertificationsEdit} />
+              <Route
+                path="/admin/certifications/delete/:id"
+                exact
+                component={CertificationsDelete}
+              />
+              <Route path="/admin/experience" exact component={ExperienceList} />
+              <Route path="/admin/experience/new" exact component={ExperienceAdd} />
+              <Route path="/admin/experience/edit/:id" exact component={ExperienceEdit} />
+              <Route
+                path="/admin/experience/delete/:id"
+                exact
+                component={ExperienceDelete}
+              />
+              <Route path="/admin/voluteerexperience" exact component={VoluteerExperienceList} />
+              <Route path="/admin/voluteerexperience/new" exact component={VoluteerExperienceAdd} />
+              <Route path="/admin/voluteerexperience/edit/:id" exact component={VoluteerExperienceEdit} />
+              <Route
+                path="/admin/voluteerexperience/delete/:id"
+                exact
+                component={VoluteerExperienceDelete}
               />
             </div>
           </div>

@@ -3,8 +3,7 @@ import { Field, reduxForm } from "redux-form";
 import TextField from '@material-ui/core/TextField';
 
 
-class CertificationForm extends Component {
-
+class ExperienceForm extends Component {
 
 
     renderDateTimePicker = ({ input: { onChange, value }, label }) => {
@@ -43,7 +42,21 @@ class CertificationForm extends Component {
         );
 
     };
+    redernTextarea = ({ input, label }) => {
+        const fieldError = `field`;
+        const mystyle = {
+            paddingBottom: "10px",
+            fontSize: "20px",
+        };
 
+        return (
+            <div className={fieldError}>
+                <label style={mystyle}>{label} </label>
+                <textarea {...input} autoComplete="off" />
+            </div>
+        );
+
+    };
 
     onSubmit = (fromValues) => {
         console.log(fromValues);
@@ -62,33 +75,38 @@ class CertificationForm extends Component {
                         className="ui form error"
                     >
                         <Field
-                            name="cert_name"
+                            name="comp_name"
                             component={this.redernInput}
-                            label="Certification Name"
+                            label="Company Name"
                         />
                         <Field
-                            name="name_link"
+                            name="comp_position"
                             component={this.redernInput}
-                            label="Certification Link"
+                            label="Postion Title"
                         />
                         <Field
-                            name="institute"
-                            component={this.redernInput}
-                            label="Institute Name"
+                            name="comp_job_description"
+                            component={this.redernTextarea}
+                            label="Job description"
                         />
                         <Field
-                            name="institute_link"
-                            component={this.redernInput}
-                            label="Institute Link"
-                        />
-                        <Field
-                            name="receive_date"
+                            name="comp_start_date"
                             component={this.renderDateTimePicker}
-                            label="Recevie Date"
+                            label="Start Date"
+                        />
+                        <Field
+                            name="comp_end_date"
+                            component={this.renderDateTimePicker}
+                            label="End Date"
+                        />
+                        <Field
+                            name="comp_duration"
+                            component={this.redernInput}
+                            label="Duration"
                         />
                         <br />
-                     
-    
+
+
                         <button className="ui right floated purple button" type="submit" >{this.props.button}</button>
                     </form>
                 </div>
@@ -100,20 +118,17 @@ class CertificationForm extends Component {
 
 const validate = (formValues) => {
     const error = {};
-    if (!formValues.cert_name) {
-        error.cert_name = "You must enter a title";
+    if (!formValues.comp_name) {
+        error.comp_name = "You must enter a title";
     }
-    if (!formValues.institute) {
-        error.institute = "You must enter a description";
-    }
-    if (!formValues.receive_date) {
-        error.receive_date = "You must enter a description";
+    if (!formValues.comp_duration) {
+        error.comp_duration = "You must enter a description";
     }
     return error;
 };
 
 
 export default reduxForm({
-    form: "CertificationForm",
+    form: "ExperienceForm",
     validate
-})(CertificationForm);
+})(ExperienceForm);

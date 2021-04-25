@@ -15,7 +15,7 @@ export const links = [
         activeClassName: "active",
     },
     {
-        to: "/admin/certification",
+        to: "/admin/certifications",
         name: "Certification",
         activeClassName: "active",
     },

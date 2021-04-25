@@ -36,9 +36,9 @@ class ProjectsList extends Component {
                     <div className="content" key={project.title}>
 
                         <div className="header">
-                            <Link to={`/projects/${project._id}`}>
-                                {project.title}
-                            </Link>
+
+                            {project.title}
+
                         </div>
                         <p className="description">{project.summary}</p>
                         {this.renderAdmin(project)}
