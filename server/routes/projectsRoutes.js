@@ -9,12 +9,13 @@ const imageuploadmiddle = require("../middleware/imageuploadmiddle");
 module.exports = function (app) {
   app.get("/project", projectscontroll.getallprojects);
   app.post(
-    "/project/add",
+    "/project/add", imageuploadmiddle.upload.single('image_url'),
     projectscontroll.createprojects
   );
   app.get("/project/:id", projectsmiddle.getProject, projectscontroll.getbyid);
   app.put(
     "/project/:id",
+    imageuploadmiddle.upload.single('image_url'),
     projectsmiddle.getProject,
     projectscontroll.editbyid
   );

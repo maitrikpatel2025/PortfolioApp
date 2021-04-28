@@ -27,6 +27,7 @@ exports.createprojects = async (req, res) => {
     end_date : req.body.end_date,
     git_link : req.body.git_link,
     website_link : req.body.website_link,
+    image_url: req.file.image_url
   });
 
   try {
@@ -57,6 +58,7 @@ exports.editbyid = async (req, res) => {
     res.project.end_date = req.body.end_date;
     res.project.git_link = req.body.git_link;
     res.project.website_link = req.body.website_link;
+    res.project.image_url = req.file.location;
   }
   try {
     const updatedproject = await res.project.save();

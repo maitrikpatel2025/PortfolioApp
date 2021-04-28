@@ -6,6 +6,27 @@ import TextField from '@material-ui/core/TextField';
 class ProjectsForm extends Component {
 
 
+
+    renderFile = ({ input,label, dataAllowedFileExtensions }) => {
+        const mystyle = {
+            paddingBottom: "10px",
+            fontSize: "20px",
+        };
+        const onInputChange = (e) => {
+            e.preventDefault();
+            const files = [...e.target.files];
+            input.onChange(files[0]);
+        };
+        return (
+            <div className="field">
+                <label style={mystyle}>{label}</label>
+                <input type="file"
+                    onChange={onInputChange}
+                    data-allowed-file-extensions={dataAllowedFileExtensions} />
+            </div>
+        )
+    }
+
     renderHobbies = ({ fields, label }) => {
         const mystyle = {
             paddingBottom: "10px",
@@ -101,6 +122,7 @@ class ProjectsForm extends Component {
                     <form
                         onSubmit={this.props.handleSubmit(this.onSubmit)}
                         className="ui form error"
+                        enctype='multipart/form-data'
                     >
                         <Field
                             name="title"
@@ -158,6 +180,11 @@ class ProjectsForm extends Component {
                             component={this.redernInput}
                             label="Web Link"
                         />
+                        <Field
+                            label="image"
+                            name="image_url"
+                            component={this.renderFile}
+                            dataAllowedFileExtensions="jpg png bmp"></Field>
                         <Field
                             name="duration"
                             component={this.redernInput}

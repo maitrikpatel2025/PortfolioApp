@@ -51,7 +51,7 @@ exports.editbyid = async (req, res) => {
 
 exports.detetebyid = async (req, res) => {
   try {
-    await res.contact.remove();
+    await res.status(200).contact.remove();
     res.status(200).json({ message: "delete" });
   } catch (error) {
     res.status(400).json({

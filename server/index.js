@@ -20,7 +20,7 @@ mongoose
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
-  .then(() => console.log("connected"))
+  .then(() => console.log("Mongo Database connected"))
   .catch((err) => console.log(err));
 
 app.use(passport.initialize());
@@ -44,6 +44,13 @@ app.use(
   })
 );
 
+global.__basedir = __dirname;
+
+var corsOptions = {
+  origin: "http://localhost:8081"
+};
+
+app.use(cors(corsOptions));
 //App routes
 
 require("./routes/authRoutes")(app);
@@ -55,8 +62,11 @@ require("./routes/meetingRoutes")(app);
 require("./routes/contactRoutes")(app);
 require("./routes/experinceRoutes")(app);
 require("./routes/certificationRoutes")(app);
+require("./routes/testimonialRoutes")(app);
+
 
 //Server Setup
+
 const PORT = process.env.PORT || 5080;
 const server = http.createServer(app);
 server.listen(PORT, () => console.log(`server connect on ${PORT}`));

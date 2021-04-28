@@ -44,6 +44,9 @@ const projectsSchema = new Schema({
     type: Date,
     default: Date.now(),
   },
+  image_url:{
+    type: String,
+  }
 });
 
 const Modelclass = mongoose.model("projects", projectsSchema);

@@ -47,7 +47,7 @@ exports.editbyid = async (req, res) => {
 
 exports.deletebyid = async (req, res) => {
   try {
-    await res.status(200).skills.remove();
+    await res.skills.remove();
     res.status(200).json({ message: "delete" });
   } catch (error) {
     res.status(500).json({ message: err.message });

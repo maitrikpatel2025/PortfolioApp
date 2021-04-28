@@ -32,7 +32,7 @@
 	font-family:Lato;
 	text-align:left;
     font-weight: 200;
-	font-size:15px;
+	font-size:17px;
     line-height: 35px;
 }
 
@@ -45,11 +45,11 @@
 .layout2_tagline{
     position: relative;
     top: 100px;
-    font-family:Lato;
-	text-align:left;
-	font-size:24px;
+    font-weight: 600;
+    font-family: "Lato",sans-serif;
+    text-align: left;
     text-transform: uppercase;
-    font-weight:bold;
+	font-size:24px;
     line-height: 1.4;
     letter-spacing: 2px
 }
@@ -86,7 +86,7 @@
 .layout3_tagline{
     position: relative;
     top: 80px;
-    font-family:Lato;
+    font-family: "Lato",sans-serif;
 	text-align:left;
 	font-size:56px;
     text-transform: uppercase;
