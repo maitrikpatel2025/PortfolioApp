@@ -11,6 +11,8 @@ import LandingAnimation from "../SvgAnimations/LandingAnimation";
 
 import './Home.css'
 import Footer from "../Footer/Footer";
+import { Link } from "react-router-dom";
+import TestimonialCarousel from "../TestimonialCarousel/TestimonialCorousel";
 
 const Home = () => {
   return (
@@ -28,8 +30,12 @@ const Home = () => {
                 seeks out innovative solutions to everyday problems.</p>
               </div>
               <div className="row lbtn">
-                <Button Text="Take A Tour" />
-                <Button Color Text="Connect With Me" />
+                <Link to="/works">
+                  <Button Text="Take A Tour" />
+                </Link>
+                <Link to="/contact">
+                  <Button Color Text="Connect With Me" />
+                </Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-12">
@@ -58,7 +64,9 @@ Python /JavaScript / Reactjs / React Native and some frameworks.</p>
                 <p className="layout2_intro">I specialize in UI/UX Design, Mobile-App Devlopment, and Software Devlopment.</p>
               </div>
               <div className="row lbtn">
-                <Button Color Text="Learn More" />
+                <Link to="/story">
+                  <Button Color Text="Learn More" />
+                </Link>
               </div>
             </div>
           </div>
@@ -77,7 +85,9 @@ Python /JavaScript / Reactjs / React Native and some frameworks.</p>
                 <p className="layout3_intro">In my experience, when I really focus on solving needs for customer and exceeding expectations for my brand</p>
               </div>
               <div className="row lbtn">
-                <Button Color Text="Explore" />
+                <Link to="/works">
+                  <Button Color Text="Explore" />
+                </Link>
               </div>
             </div>
             <div className="col-lg-6 col-md-12 ">
@@ -108,8 +118,13 @@ Python /JavaScript / Reactjs / React Native and some frameworks.</p>
             </div>
           </div>
         </div>
+        <section className="layout4">
+          <div className="container" style={{ width: "100%" }}>
+            <TestimonialCarousel />
+          </div>
+        </section>
       </section>
-      <Footer/>
+      <Footer />
     </section>
   );
 };

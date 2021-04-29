@@ -10,6 +10,7 @@ import miniProjectsReducer from "./miniProjectsReducer";
 import navigationReducer from "./navigationReducer";
 import projectReducer from "./projectReducer";
 import skillsReducer from "./skillsReducer";
+import testimonialReducer from "./testimonialReducer";
 import voluteerExperienceReducer from "./voluteerExperienceReducer";
 
 export default combineReducers({
@@ -23,6 +24,7 @@ export default combineReducers({
   certification: certificationReducer,
   experience: experienceReducer,
   voluteerExperience: voluteerExperienceReducer,
+  testimonial:testimonialReducer,
   contact: contactsReducer,
   meeting:meetingReducer
 });

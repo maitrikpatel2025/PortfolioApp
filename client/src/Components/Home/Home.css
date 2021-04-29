@@ -155,6 +155,12 @@
     padding-top: 5px;
 }
 
+.layout4{
+    position: relative;
+    padding: 30px;
+    width: 100%;
+    background-color: #F9F9FC;
+}
 @keyframes drop-2 {
     0% {
       transform: translateX(-100px);
@@ -164,24 +170,48 @@
       transform: translateX(0);
     }
   }
-@media only screen and (max-width: 900px) {
-    .header_text{
-        position: relative;
-        left: 80px;
-    }
-    .header_intro{
-        position: relative;
-        left: 80px;
-    }
-    .header_tagline{
-        text-align:center;
-    }
-    .lbtn{
-        position: relative;
-        left: 80px;
-    }
-    .layout2{
-        width: 100%;
-    }
+
+  
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
     
-}
+   
+    
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    
+   
+    
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+   
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+   
+    
+  }

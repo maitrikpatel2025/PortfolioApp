@@ -35,6 +35,10 @@ import ExperienceList from "./Components/Manager/Experience/ExperienceList";
 import ExperienceAdd from "./Components/Manager/Experience/ExperienceAdd";
 import ExperienceEdit from "./Components/Manager/Experience/ExperienceEdit";
 import ExperienceDelete from "./Components/Manager/Experience/ExperienceDelete";
+import TestimonialList from "./Components/Manager/Testimonial/TestimonialList";
+import TestimonialAdd from "./Components/Manager/Testimonial/TestimonialAdd";
+import TestimonialEdit from "./Components/Manager/Testimonial/TestimonialEdit";
+import TestimonialDelete from "./Components/Manager/Testimonial/TestimonialDelete";
 
 class App extends Component {
   render() {
@@ -102,6 +106,14 @@ class App extends Component {
                 path="/admin/voluteerexperience/delete/:id"
                 exact
                 component={VoluteerExperienceDelete}
+              />
+              <Route path="/admin/testimonial" exact component={TestimonialList} />
+              <Route path="/admin/testimonial/new" exact component={TestimonialAdd} />
+              <Route path="/admin/testimonial/edit/:id" exact component={TestimonialEdit} />
+              <Route
+                path="/admin/testimonial/delete/:id"
+                exact
+                component={TestimonialDelete}
               />
             </div>
           </div>

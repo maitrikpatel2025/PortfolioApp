@@ -1,3 +1,4 @@
+
 const aws = require('aws-sdk');
 const multer = require('multer');
 const multerS3 = require('multer-s3');
@@ -19,8 +20,7 @@ const fileFilter = (req, file, cb) => {
       cb(new Error("Invalid file type, only JPEG and PNG is allowed!"), false);
     }
   };
-
-
+  
 const upload = multer({
   fileFilter: fileFilter,
   storage: multerS3({ // reference: https://www.npmjs.com/package/multer-s3
@@ -35,8 +35,8 @@ const upload = multer({
       const extension = path.extname(file.originalname);
       cb(null, Date.now().toString() + extension);
     }
+
   })
 })
-
 
 module.exports = upload

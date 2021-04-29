@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-import { Field, FieldArray, formValues, reduxForm } from "redux-form";
+import { Field, FieldArray, reduxForm } from "redux-form";
 import TextField from '@material-ui/core/TextField';
-import Dropzone from 'react-dropzone'
-import DropZoneField from "../../imageUpload/DropzoneField";
 
-
-const imageIsRequired = (value) => (!value ? "Required" : undefined);
 class ProjectsForm extends Component {
-    state = { imageFile: [] };
 
     renderHobbies = ({ fields, label }) => {
         const mystyle = {
@@ -92,21 +87,9 @@ class ProjectsForm extends Component {
 
 
     onSubmit = (formValues) => {
-        const fd = new FormData();
-        fd.append("imageFile", formValues.image_url.file);
         this.props.onSubmit(formValues);
     };
 
-    handleOnDrop = (newImageFile, onChange) => {
-        const imageFile = {
-          file: newImageFile[0],
-          name: newImageFile[0].name,
-          preview: URL.createObjectURL(newImageFile[0]),
-          size: newImageFile[0].size
-        };
-    
-        this.setState({ imageFile: [imageFile] }, () => onChange(imageFile));
-      };
     
     render() {
         return (
@@ -174,13 +157,10 @@ class ProjectsForm extends Component {
                             component={this.redernInput}
                             label="Web Link"
                         />
-                        <Field
-                            name="image_url"
-                            component={DropZoneField}
-                            type="file"
-                            imagefile={this.state.imageFile}
-                            handleOnDrop={this.handleOnDrop}
-                            validate={[imageIsRequired]}
+                         <Field
+                            name="image_link"
+                            component={this.redernInput}
+                            label="image link"
                         />
                         <Field
                             name="duration"

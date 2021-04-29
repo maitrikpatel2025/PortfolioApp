@@ -23,7 +23,7 @@ class ProjectsEdit extends Component {
                 <div className="ui container">
                     <h1>Edit your Projects </h1>
                 </div>
-                <ProjectsFrom initialValues={_.pick(this.props.projects, 'title', 'summary','other_details',"skills","tech_skills_logo","roles","team","start_date","end_date","git_link","website_link","duration")} onSubmit={this.onSubmit} button="Edit Project" />
+                <ProjectsFrom initialValues={_.pick(this.props.projects, 'title', 'summary','other_details',"skills","tech_skills_logo","roles","team","start_date","end_date","git_link","website_link","duration","image_url")} onSubmit={this.onSubmit} button="Edit Project" />
             </div>
         );
     }

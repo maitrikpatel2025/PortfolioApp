@@ -1,0 +1,13 @@
+.Carousel{
+}
+
+.renderLeftIcon{
+    border: 0.12em solid #FF3366;
+    padding: 0.4em 0.4em;
+    margin:0 1.5em 1.5em 0;;
+}
+.renderRightIcon{
+    border: 0.12em solid #562AF0;
+    padding: 0.4em 0.4em;
+    margin:0 1.5em 1.5em 0;;
+}
