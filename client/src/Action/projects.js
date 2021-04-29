@@ -1,3 +1,4 @@
+
 import project from '../Api/authapi';
 import history from '../history';
 import {
@@ -10,7 +11,9 @@ import {
 
 export const createProject = formValues => async (dispatch) => {
     const response = await project.post('/project/add', { ...formValues });
+    console.log(formValues)
     dispatch({ type: CREATE_PROJECT, payload: response.data });
+    
     history.push('/admin/projects');
   };
   

@@ -1,33 +1,13 @@
 import React, { Component } from "react";
-import { Field, FieldArray, reduxForm } from "redux-form";
+import { Field, FieldArray, formValues, reduxForm } from "redux-form";
 import TextField from '@material-ui/core/TextField';
 import Dropzone from 'react-dropzone'
+import DropZoneField from "../../imageUpload/DropzoneField";
 
 
-
-
-
+const imageIsRequired = (value) => (!value ? "Required" : undefined);
 class ProjectsForm extends Component {
-
-    renderFile = ({ input, label, dataAllowedFileExtensions }) => {
-        const mystyle = {
-            paddingBottom: "10px",
-            fontSize: "20px",
-        };
-        const onInputChange = (e) => {
-            e.preventDefault();
-            const files = [...e.target.files];
-            input.onChange(files[0]);
-        };
-        return (
-            <div className="field">
-                <label style={mystyle}>{label}</label>
-                <input type="file"
-                    onChange={onInputChange}
-                    data-allowed-file-extensions={dataAllowedFileExtensions} />
-            </div>
-        )
-    }
+    state = { imageFile: [] };
 
     renderHobbies = ({ fields, label }) => {
         const mystyle = {
@@ -109,37 +89,26 @@ class ProjectsForm extends Component {
 
     };
 
-    onSubmit = (fromValues) => {
-        console.log(fromValues);
-        this.props.onSubmit(fromValues);
+
+
+    onSubmit = (formValues) => {
+        const fd = new FormData();
+        fd.append("imageFile", formValues.image_url.file);
+        this.props.onSubmit(formValues);
     };
 
-
+    handleOnDrop = (newImageFile, onChange) => {
+        const imageFile = {
+          file: newImageFile[0],
+          name: newImageFile[0].name,
+          preview: URL.createObjectURL(newImageFile[0]),
+          size: newImageFile[0].size
+        };
+    
+        this.setState({ imageFile: [imageFile] }, () => onChange(imageFile));
+      };
+    
     render() {
-
-        const FILE_FIELD_NAME = 'files';
-
-        const renderDropzoneInput = (field) => {
-            const files = field.input.value;
-            return (
-                <div>
-                    <Dropzone
-                        name={field.name}
-                        onDrop={(filesToUpload, e) => field.input.onChange(filesToUpload)}
-                    >
-                        <div>Try dropping some files here, or click to select files to upload.</div>
-                    </Dropzone>
-                    {field.meta.touched &&
-                        field.meta.error &&
-                        <span className="error">{field.meta.error}</span>}
-                    {files && Array.isArray(files) && (
-                        <ul>
-                            { files.map((file, i) => <li key={i}>{file.name}<img src={file.preview} /></li>)}
-                        </ul>
-                    )}
-                </div>
-            );
-        }
         return (
             <div style={{ padding: "40px" }} className="StreamForm">
 
@@ -205,10 +174,13 @@ class ProjectsForm extends Component {
                             component={this.redernInput}
                             label="Web Link"
                         />
-                        <label>image</label>
                         <Field
                             name="image_url"
-                            component={this.renderDropzoneInput}
+                            component={DropZoneField}
+                            type="file"
+                            imagefile={this.state.imageFile}
+                            handleOnDrop={this.handleOnDrop}
+                            validate={[imageIsRequired]}
                         />
                         <Field
                             name="duration"

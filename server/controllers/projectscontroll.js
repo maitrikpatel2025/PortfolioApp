@@ -13,6 +13,7 @@ exports.getallprojects = async (req, res) => {
 
 exports.createprojects = async (req, res) => {
 
+
   const projects = new Projects({
     title : req.body.title,
     description : req.body.description,
@@ -27,7 +28,7 @@ exports.createprojects = async (req, res) => {
     end_date : req.body.end_date,
     git_link : req.body.git_link,
     website_link : req.body.website_link,
-    image_url: req.file.location
+    image_url: req.file.filename
   });
 
   try {
@@ -44,6 +45,7 @@ exports.getbyid = async (req, res) => {
 };
 
 exports.editbyid = async (req, res) => {
+  const new_image_url = req.file.location;
   if (req.body.title != null) {
     res.project.title = req.body.title;
     res.project.description = req.body.description;
@@ -58,7 +60,7 @@ exports.editbyid = async (req, res) => {
     res.project.end_date = req.body.end_date;
     res.project.git_link = req.body.git_link;
     res.project.website_link = req.body.website_link;
-    res.project.image_url = req.file.location;
+    res.project.image_url = new_image_url;
   }
   try {
     const updatedproject = await res.project.save();
