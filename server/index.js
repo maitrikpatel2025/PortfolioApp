@@ -31,7 +31,7 @@ app.use(morgan("combined"));
 app.use(cors());
 app.use(bodyParser.json({ limit: "50mb" }));
 app.use(bodyParser.urlencoded({ limit: "50mb", extended: true }));
-app.use("./images", express.static(path.join(__dirname, "images")));
+app.use("./server/images", express.static(path.join(__dirname, "images")));
 
 app.use(cookieParser("secretcode"));
 app.use(passport.initialize());
@@ -44,13 +44,7 @@ app.use(
   })
 );
 
-global.__basedir = __dirname;
 
-var corsOptions = {
-  origin: "http://localhost:8081"
-};
-
-app.use(cors(corsOptions));
 //App routes
 
 require("./routes/authRoutes")(app);

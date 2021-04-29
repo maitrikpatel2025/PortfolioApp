@@ -27,7 +27,7 @@ exports.createprojects = async (req, res) => {
     end_date : req.body.end_date,
     git_link : req.body.git_link,
     website_link : req.body.website_link,
-    image_url: req.file.image_url
+    image_url: req.file.location
   });
 
   try {

@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import { Field, FieldArray, reduxForm } from "redux-form";
 import TextField from '@material-ui/core/TextField';
+import Dropzone from 'react-dropzone'
+
+
+
 
 
 class ProjectsForm extends Component {
 
-
-
-    renderFile = ({ input,label, dataAllowedFileExtensions }) => {
+    renderFile = ({ input, label, dataAllowedFileExtensions }) => {
         const mystyle = {
             paddingBottom: "10px",
             fontSize: "20px",
@@ -115,6 +117,29 @@ class ProjectsForm extends Component {
 
     render() {
 
+        const FILE_FIELD_NAME = 'files';
+
+        const renderDropzoneInput = (field) => {
+            const files = field.input.value;
+            return (
+                <div>
+                    <Dropzone
+                        name={field.name}
+                        onDrop={(filesToUpload, e) => field.input.onChange(filesToUpload)}
+                    >
+                        <div>Try dropping some files here, or click to select files to upload.</div>
+                    </Dropzone>
+                    {field.meta.touched &&
+                        field.meta.error &&
+                        <span className="error">{field.meta.error}</span>}
+                    {files && Array.isArray(files) && (
+                        <ul>
+                            { files.map((file, i) => <li key={i}>{file.name}<img src={file.preview} /></li>)}
+                        </ul>
+                    )}
+                </div>
+            );
+        }
         return (
             <div style={{ padding: "40px" }} className="StreamForm">
 
@@ -180,11 +205,11 @@ class ProjectsForm extends Component {
                             component={this.redernInput}
                             label="Web Link"
                         />
+                        <label>image</label>
                         <Field
-                            label="image"
                             name="image_url"
-                            component={this.renderFile}
-                            dataAllowedFileExtensions="jpg png bmp"></Field>
+                            component={this.renderDropzoneInput}
+                        />
                         <Field
                             name="duration"
                             component={this.redernInput}
