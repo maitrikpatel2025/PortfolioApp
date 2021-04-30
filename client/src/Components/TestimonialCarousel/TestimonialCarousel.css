@@ -1,13 +1,170 @@
 .Carousel{
+    display: flex;
+    height: 400px;
 }
-
+.Item{
+    display: flex;
+    padding: 100px 0px;
+}
+.carousel-inner{
+    display: flex;
+    padding: 0px 150px;
+}
+.testi_message{
+    font-family:Lato;
+	text-align:left;
+	font-size:30px;
+    font-family: "Lato";
+    font-weight: 501;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    
+}
+.testi_name{
+    font-family:Lato;
+	text-align:left;
+	font-size:20px;
+    font-weight: normal;
+	letter-spacing:0.6000000238418579;
+    color: black;
+}
+.testi_profession{
+    font-family:Lato;
+	text-align:left;
+	font-size:15px;
+    color: 656B8E;
+}
 .renderLeftIcon{
+    box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);  
     border: 0.12em solid #FF3366;
     padding: 0.4em 0.4em;
     margin:0 1.5em 1.5em 0;;
 }
 .renderRightIcon{
+    box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
     border: 0.12em solid #562AF0;
     padding: 0.4em 0.4em;
     margin:0 1.5em 1.5em 0;;
+}
+
+/* 
+    ##Device = Tablets, Ipads (p2rtrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    
+    .Item{
+        display: flex;
+        padding: 0px 0px;
+    }
+    .carousel-inner{
+        display: flex;
+        padding: 0px 0px;
+    }
+    .testi_message{
+        font-family:Lato;
+        text-align:left;
+        font-size:15px;
+        font-family: "Lato";
+        font-weight: 501;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        padding-top: 140px;
+        margin-left :80px;
+        margin-right :80px;
+    
+    }
+    .testi_name{
+        font-family:Lato;
+        text-align:left;
+        font-size:10px;
+        font-weight: normal;
+        letter-spacing:0.6000000238418579;
+        margin: 0px 80px;
+        color: black;
+    }
+    .testi_profession{
+        font-family:Lato;
+        text-align:left;
+        font-size:10px;
+        color: 656B8E;
+        margin: 0px 80px;
+    }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+    .Item{
+        display: flex;
+        padding: 0px 0px;
+    }
+    .carousel-inner{
+        display: flex;
+        padding: 0px 0px;
+    }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+    .Item{
+        padding: 0px 0px;
+    }
+    .carousel-inner{
+        padding: 0px 0px;
+    }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+    .Item{
+        padding: 0px 0px;
+    }
+    .carousel-inner{
+        padding: 0px 0px;
+    }
+    .testi_message{
+        font-family:Lato;
+        text-align:left;
+        font-size:15px;
+        font-family: "Lato";
+        font-weight: 501;
+        line-height: 1.4;
+        letter-spacing: 1px;
+        padding-top: 100px;
+        margin-left :80px;
+        margin-right :80px;
+    
+    }
+    .testi_name{
+        font-family:Lato;
+        text-align:left;
+        font-size:10px;
+        font-weight: normal;
+        letter-spacing:0.6000000238418579;
+        margin: 0px 80px;
+        color: black;
+    }
+    .testi_profession{
+        font-family:Lato;
+        text-align:left;
+        font-size:10px;
+        color: 656B8E;
+        margin: 0px 80px;
+    }
 }

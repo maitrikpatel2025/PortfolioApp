@@ -13,7 +13,7 @@ class CertificationsList extends Component {
         this.props.fetchcertifications();
     }
 
-    renderAdmin( certification) {
+    renderAdmin(certification) {
         return (
             <div className="ui two buttons">
                 <Link to={`certifications/edit/${ certification._id}`} className="ui button primary">
@@ -30,7 +30,7 @@ class CertificationsList extends Component {
     }
 
     renderList() {
-        return this.props. certifications.map(( certification) => {
+        return this.props.certifications.map(( certification) => {
             return (
                 <div className="card">
                     <div className="content" key={ certification.cert_name}>

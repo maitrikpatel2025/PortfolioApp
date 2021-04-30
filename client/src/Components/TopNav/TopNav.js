@@ -13,7 +13,7 @@ const Nav = styled.nav`
   -webkit-box-pack: justify;
   justify-content: space-between;
   ul {
-    padding-right: 200px;
+    margin-right: 200px;
     display: flex;
     list-style: none;
     display: flex;

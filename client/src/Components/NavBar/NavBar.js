@@ -7,7 +7,7 @@ import CloseIcons from "../Icons/CloseIcons";
 import { NavLink } from "react-router-dom";
 import MenuIcons from "../Icons/MenuIcons";
 import TopNav from "../TopNav/TopNav";
-import Logo from "../Logo/Logo";
+
 
 const Ul = styled.ul`
   display: none;

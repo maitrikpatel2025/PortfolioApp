@@ -17,15 +17,15 @@ class TestimonialCarousel extends Component {
             return (
 
                 <Carousel.Item interval={500}>
-                    <div key={testimonial._id}>
-                        <span>&quot;{testimonial.testi_message}&quot;</span>
-                        <span >
-
+                    <div classname="coroselItem" key={testimonial._id}>
+                        <h1 className="testi_message" >&quot;{testimonial.testi_message}&quot;</h1>
+                        <a href={testimonial.testi_linkedin_link}>
+                        <p className="testi_name">
                             {testimonial.testi_name}
-
-                        </span>
-                        <span> {testimonial.testi_profession}</span>
-                        <span> {moment(`${testimonial.receive_date}`).format('MMMM Do YYYY')}</span>
+                        </p>
+                        </a>
+                        <p className="testi_profession"> {testimonial.testi_profession}</p>
+                        <p className="testi_profession"> {moment(`${testimonial.receive_date}`).format('MMMM Do YYYY')}</p>
                     </div>
                 </Carousel.Item>
 
@@ -50,9 +50,11 @@ class TestimonialCarousel extends Component {
         }
         return (
             <div className="Carousel">
-                <Carousel nextIcon={renderRightIcon()} prevIcon={renderLeftIcon()}>
+                <div className="row Item">
+                <Carousel nextIcon={renderRightIcon()} prevIcon={renderLeftIcon()} indicators={false}>
                     {this.renderList()}
                 </Carousel>
+                </div>
             </div>
         )
     }
