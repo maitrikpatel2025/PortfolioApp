@@ -39,6 +39,7 @@ import TestimonialList from "./Components/Manager/Testimonial/TestimonialList";
 import TestimonialAdd from "./Components/Manager/Testimonial/TestimonialAdd";
 import TestimonialEdit from "./Components/Manager/Testimonial/TestimonialEdit";
 import TestimonialDelete from "./Components/Manager/Testimonial/TestimonialDelete";
+import Works from "./Components/Works/Works";
 
 class App extends Component {
   render() {
@@ -57,6 +58,7 @@ class App extends Component {
             <div className="Page">
               <Route path='/' exact component={Home} />
               <Route path='/story' exact component={Story} />
+              <Route path='/works' exact component={Works} />
               <Route path='/manager/login' exact component={SignIn} />
               <Route path="/logout" exact component={SignOut} />
               <Route path="/admin/projects" exact component={ProjectsList} />
