@@ -1,0 +1,111 @@
+.story_intro_layout1{
+    font-size: 16px;
+    text-align: left;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.Heading{
+ margin-top: 5%;
+}
+.story_tagline_layout1{
+    margin-right:10px ;
+    margin: 0;
+    visibility: visible;
+    font-weight: 600;
+    font-family: Lato;
+    text-align: left;
+    text-transform: uppercase;
+    font-size:25px;
+    line-height: 1.4;
+    padding-bottom: 10px;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.story_tagline2_layout1{
+    color: #FE4B57;
+}
+.story_tagline3_layout1{
+    color: #562AF0;
+}
+.photo_image{
+    margin-top: 10%;
+    border: 1px solid black;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.Q1{
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.A9{  
+    line-height: 40px;
+    font-weight: 600;
+    font-family: Lato;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.A92{
+    color: #562AF0;
+}
+
+.A10{
+    line-height: 40px;
+    font-weight: normal;
+    font-family: Lato;
+    font-size: 20px;
+    text-align: center;
+    padding: 30px 30px;
+    margin: 0px 40px;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.Book_layout{
+    padding: 30px 0px;
+    background-color: #E4F2FF;
+}
+.book_card{
+    padding: 10px 10px;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+  /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+ 
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  }
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+    
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+    .response{
+        display: none;
+    }
+
+  }

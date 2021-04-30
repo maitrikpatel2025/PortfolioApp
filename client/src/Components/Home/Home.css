@@ -8,8 +8,8 @@
 .header_text{
     margin-top: 15%;
     animation-delay: 0.1s;
-   -webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 500ms ease-in-out;
+   -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 
 .text_layout1{
@@ -39,8 +39,8 @@
 }
 .img_animat1{
     animation-delay: 1.2s;
-    -webkit-animation: fadeInUp 1000ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 1000ms ease-in-out;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 
 .layout2{
@@ -50,8 +50,8 @@
 .header_text2{
   margin-top: 25%;
   animation-delay: 0.1s;
- -webkit-animation: fadeInUp 500ms ease-in-out; /* Chrome, Safari, Opera */
-  animation: fadeInUp 500ms ease-in-out;
+ -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+  animation: fadeInUp 1500ms ease-in-out;
 }
 
 .text_layout2{
@@ -80,8 +80,8 @@
       
   }
 .img_animat2{
-    -webkit-animation: fadeInUp 1000ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 1000ms ease-in-out;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 .btn_layout2{
   position: relative;
@@ -89,8 +89,8 @@
 }
 .header_text3{
   margin-top: 20%;
-  -webkit-animation: fadeInUp 1000ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 1000ms ease-in-out;
+  -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 .text_header_layout3{
   margin: 0;
@@ -132,8 +132,8 @@
   padding: 20px;
   margin: 20px;
   border-radius: 10px 50px;
-  -webkit-animation: fadeInUp 1000ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 1000ms ease-in-out;
+  -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
   
 }
 .card2{
@@ -147,8 +147,8 @@
   padding: 20px;
   margin: 20px;
   border-radius: 15px 50px;
-  -webkit-animation: fadeInUp 1000ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 1000ms ease-in-out;
+  -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 .card3{
   border:0.12em solid #562AF0;
@@ -162,8 +162,8 @@
   padding: 20px;
   margin: 20px;
   border-radius: 10px 50px;
-  -webkit-animation: fadeInUp 1000ms ease-in-out; /* Chrome, Safari, Opera */
-    animation: fadeInUp 1000ms ease-in-out;
+  -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 .card_header{
   text-align:left;
