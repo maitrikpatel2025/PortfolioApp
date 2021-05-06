@@ -1,9 +1,11 @@
-import React from "react";
+import React, { Component } from "react";
+import { connect } from 'react-redux';
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../Logo/Logo";
 import { links } from "../NavBar/NavBarItem";
+import * as actions from "../../Action/toggleWork";
 
 const Nav = styled.nav`
   width: 100%;
@@ -45,9 +47,11 @@ const Nav = styled.nav`
   }
 `;
 
-const TopNav = () => {
-  return (
-    <div className="TopNav">
+class TopNav extends Component {
+  state = {}
+  render() {
+    const { toggleProject } = this.props
+    return (<div className="TopNav">
       <Nav>
         <div className="logo">
           <Logo />
@@ -55,19 +59,20 @@ const TopNav = () => {
         <ul>
           {links.map((link) => (
             <NavLink
-            key={link.name}
+              key={link.name}
               to={link.to}
               activeClassName={link.activeClassName}
               activeStyle={{
                 borderBottom: "2px solid #656B8E",
               }}
             >
-              <li>{link.name}</li>
+              <li onClick={toggleProject}>{link.name}</li>
             </NavLink>
           ))}
         </ul>
       </Nav>
-    </div>
-  );
-};
-export default TopNav;
+    </div>);
+  }
+}
+
+export default connect(null, actions)(TopNav);

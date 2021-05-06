@@ -158,7 +158,7 @@ class ProjectsForm extends Component {
                             label="Web Link"
                         />
                          <Field
-                            name="image_link"
+                            name="image_url"
                             component={this.redernInput}
                             label="image link"
                         />

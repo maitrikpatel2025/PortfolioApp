@@ -1,0 +1,33 @@
+.SubNav{
+    margin-top: 1.5%;
+}
+.menu {
+    overflow:hidden;
+    background-color:rgba(207.00000286102295, 221.00000202655792, 238.00000101327896, 0.25999999046325684);
+    display: flex;
+    justify-content: space-between;
+    border-radius: 30px;
+    padding: 0.5em 2.2em;
+    margin:0 1.5em 1.5em 0;
+    text-align:center;
+    transition: all 0.2s; 
+    border:0.12em solid #CFDDEE;
+}
+.items{
+    padding: 0.7em 5.0em;
+    visibility: visible;
+    font-weight: bold;
+    font-family: Lato;
+    text-align:center;
+    text-transform: uppercase;
+    font-size:14px;
+    letter-spacing: 1px;
+    line-height: 1.4;;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.items.actived{
+    background-color:rgba(86.00001767277718, 41.99999749660492, 240.00000089406967, 0.33000001311302185);
+    border-radius: 25px ;
+    border:0.12em solid #562AF0;
+}

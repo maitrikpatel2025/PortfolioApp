@@ -1,47 +1,68 @@
-import React, { useState } from 'react';
+import React, { Component } from 'react';
 
-const items = [
-    {
-        name: 'Projects'
-    },
-    {
-        name: 'miniProjects'
-    },
-    {
-        name: 'expericens'
-    }
-]
+import { connect } from 'react-redux';
+import * as actions from '../../Action/toggleWork'
+import Projects from '../Projects/Projects';
 
-const SubNav = () => {
-    const [activeIndex, setActiveIndex] = useState(null);
+import './SubNav.css'
 
-    const onTitleClick = (index) => {
-        setActiveIndex(index);
-    };
+class SubNav extends Component {
+    state = {}
+    render() {
+        const {
+            toggleProject,
+            toggleMiniProject,
+            toggleExperience,
+            isProjectsOpen,
+            isMiniProjectOpen,
+            isExperienceOpen
+        } = this.props;
 
-
-    const renderedItems = items.map((item, index) => {
-
-        const active = index === activeIndex ? 'active' : '';
         return (
-            <React.Fragment key={item.name}>
-                <div className={`item  ${active}`} onClick={() => onTitleClick(index)}>
-                    {item.name}
-                </div>
-            </React.Fragment>
-        );
-    });
-    return (<div className="subNav">
+            <div className="SubNav">
+                <div className="container">
+                    <div className="row justify-content-center ">
+                        <div className="menu">
+                            <div className={`items  ${isProjectsOpen ? 'actived' : " "}`} onClick={toggleProject}>
+                            PROJECTS
+                            </div>
+                            <div className={`items  ${isMiniProjectOpen ? "actived" : ''}`} onClick={toggleMiniProject}>
+                            MINI PROJECTS
+                            </div>
+                            <div className={`items  ${isExperienceOpen ? "actived" : ''}`} onClick={toggleExperience}>
+                            EXPERIENCE
+                            </div>
+                        </div>
+                    </div>
 
-        <div className="container">
-            <div className="row justify-content-center ">
-                <div className="ui secondary menu">
-                   {renderedItems}
+                    {isProjectsOpen ? (
+                        <Projects/>
+                    ) : (
+                        ''
+                    )}
+                    {isMiniProjectOpen ? (
+                        <div>MINI PROJECTS</div>
+                    ) : (
+                        ''
+                    )}
+                    {isExperienceOpen ? (
+                        <div>Expericence</div>
+                    ) : (
+                        ''
+                    )}
+                    
                 </div>
-            </div>
-        </div>
-
-    </div>);
+            </div>);
+    }
 }
 
-export default SubNav;
+const mapStateToProps = state => {
+    console.log(state)
+    return {
+        isProjectsOpen: state.toggle.isProjectsOpen,
+        isMiniProjectOpen: state.toggle.isMiniProjectOpen,
+        isExperienceOpen: state.toggle.isExperienceOpen,
+    };
+};
+
+export default connect(mapStateToProps, actions)(SubNav);

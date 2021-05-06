@@ -40,6 +40,7 @@ import TestimonialAdd from "./Components/Manager/Testimonial/TestimonialAdd";
 import TestimonialEdit from "./Components/Manager/Testimonial/TestimonialEdit";
 import TestimonialDelete from "./Components/Manager/Testimonial/TestimonialDelete";
 import Works from "./Components/Works/Works";
+import Scrolls from "./Components/Scrolls/Scrolls";
 
 class App extends Component {
   render() {
@@ -119,6 +120,7 @@ class App extends Component {
               />
             </div>
           </div>
+          <Scrolls/>
         </Router>
       </div>
     );

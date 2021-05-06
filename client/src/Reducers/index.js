@@ -12,6 +12,7 @@ import projectReducer from "./projectReducer";
 import skillsReducer from "./skillsReducer";
 import testimonialReducer from "./testimonialReducer";
 import voluteerExperienceReducer from "./voluteerExperienceReducer";
+import workToggleReducers from "./workToggleReducers";
 
 export default combineReducers({
   navigation: navigationReducer,
@@ -26,5 +27,6 @@ export default combineReducers({
   voluteerExperience: voluteerExperienceReducer,
   testimonial:testimonialReducer,
   contact: contactsReducer,
-  meeting:meetingReducer
+  meeting:meetingReducer,
+  toggle: workToggleReducers
 });

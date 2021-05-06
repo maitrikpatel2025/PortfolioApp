@@ -1,0 +1,46 @@
+.header_project{
+    animation-delay: 0.1s;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+     animation: fadeInUp 1500ms ease-in-out;
+}
+.project_layout1{
+    padding-bottom: 10px;
+}
+.project_tagline{
+    font-weight: normal;
+    font-family: 'Lato';
+    font-size: 24px;
+    text-align: center;
+    line-height: 1.4;
+    padding: 20px 0px;
+}
+.project_tagline_layout1{
+    margin: 0;
+    visibility: visible;
+    font-weight: 600;
+    font-family: 'Lato';
+    font-size: 28px;
+    text-align: left;
+    line-height: 1.4;
+}
+.project_intro_layout1{
+    font-size: 16px;
+    text-align: left;
+    color: #656B8E;
+}
+.project_skill{
+    background-color:rgba(207.00000286102295, 221.00000202655792, 238.00000101327896, 0.25999999046325684);
+    border-radius: 30px;
+    padding: 0.5em 2.2em;
+    margin:0 1.5em 1.5em 0;
+    text-align:center; 
+    border:0.12em solid #CFDDEE;
+    font-weight: 600;
+    font-family: 'Lato';
+    font-size: 14px;
+    line-height: 1.4;
+}
+.btn_project{
+    margin-top:40px;
+    padding-left: 20px;
+}

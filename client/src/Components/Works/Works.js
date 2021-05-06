@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Footer from '../Footer/Footer';
 import SubNav from '../SubNav/SubNav';
 
 class Works extends Component {
@@ -7,6 +7,7 @@ class Works extends Component {
     render() {
         return (<div className="works">
             <SubNav />
+            <Footer/>
         </div>);
     }
 }

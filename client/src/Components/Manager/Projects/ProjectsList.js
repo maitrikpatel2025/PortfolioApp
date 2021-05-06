@@ -33,7 +33,7 @@ class ProjectsList extends Component {
         return this.props.projects.map((project) => {
             return (
                 <div className="card">
-                    <div className="content" key={project.title}>
+                    <div className="content" key={project._id}>
 
                         <div className="header">
 
