@@ -1,0 +1,12 @@
+.miniproject_card1{
+    border:0.12em solid #FF3366;
+    box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
+    background-color:#FFFFFF;
+    width: 280px;
+    height: 280px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px 50px;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+      animation: fadeInUp 1500ms ease-in-out;
+}

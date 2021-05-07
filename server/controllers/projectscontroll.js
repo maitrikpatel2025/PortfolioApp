@@ -44,7 +44,6 @@ exports.getbyid = async (req, res) => {
 
 exports.editbyid = async (req, res) => {
  
-  const new_image_url = req.file.location;
   if (req.body.title != null) {
     res.project.title = req.body.title;
     res.project.description = req.body.description;

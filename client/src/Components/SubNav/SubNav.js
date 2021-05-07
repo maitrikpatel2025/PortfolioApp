@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 
 import { connect } from 'react-redux';
 import * as actions from '../../Action/toggleWork'
+import Experience from '../Experience/Experience';
+import MiniProjects from '../MiniProjects/MiniProjects';
 import Projects from '../Projects/Projects';
 
 import './SubNav.css'
@@ -24,33 +26,33 @@ class SubNav extends Component {
                     <div className="row justify-content-center ">
                         <div className="menu">
                             <div className={`items  ${isProjectsOpen ? 'actived' : " "}`} onClick={toggleProject}>
-                            PROJECTS
+                                PROJECTS
                             </div>
                             <div className={`items  ${isMiniProjectOpen ? "actived" : ''}`} onClick={toggleMiniProject}>
-                            MINI PROJECTS
+                                MINI PROJECTS
                             </div>
                             <div className={`items  ${isExperienceOpen ? "actived" : ''}`} onClick={toggleExperience}>
-                            EXPERIENCE
+                                EXPERIENCE
                             </div>
                         </div>
                     </div>
 
                     {isProjectsOpen ? (
-                        <Projects/>
+                        <Projects />
                     ) : (
                         ''
                     )}
                     {isMiniProjectOpen ? (
-                        <div>MINI PROJECTS</div>
+                        <MiniProjects />
                     ) : (
                         ''
                     )}
                     {isExperienceOpen ? (
-                        <div>Expericence</div>
+                        <Experience/>
                     ) : (
                         ''
                     )}
-                    
+
                 </div>
             </div>);
     }

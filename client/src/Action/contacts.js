@@ -11,7 +11,7 @@ import {
 export const createContact = formValues => async (dispatch) => {
     const response = await contact.post('/contact/add', { ...formValues });
     dispatch({ type: CREATE_CONTACT, payload: response.data });
-    history.push('/admin/contacts');
+    history.push('/thankyou');
   };
   
   export const fetchContacts  = () => async dispatch => {

@@ -1,0 +1,58 @@
+.header_view{
+    margin-top: 5%;
+}
+
+.View_intro_layout1{
+    font-size: 16px;
+    text-align: center;
+    color: #656B8E;
+}
+.View_intro{
+    font-size: 18px;
+    text-align: center;
+    color: #222222;
+    font-weight: 600;
+}
+.role_box{
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+    padding: 1.0em 2.5em;
+    margin-top: 40px;
+    border-radius: 5px;
+    border:1px solid rgba(221.00000202655792, 221.00000202655792, 221.00000202655792, 1);
+}
+.cbp-ig-icon:before {
+    font-family: 'devicon';
+    font-size: 6em;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+.tech_tagline_layout1{
+    padding: 1.0em 2.5em;
+    font-size: 24px;
+    text-align: center;
+    color: #222222;
+    font-weight: 600;
+}
+.tech_layout1{
+    margin-top: 5%;
+}
+@media (min-width: 481px) and (max-width: 767px) {
+    
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+    
+    .role_box{
+        margin: 40px;
+    }
+}

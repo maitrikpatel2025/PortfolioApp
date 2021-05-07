@@ -1,0 +1,65 @@
+.cap_card1{
+    border:0.12em solid #562AF0;
+    box-shadow:81px 81px 134px rgba(5.000000176951289, 64.00000378489494, 46.000001057982445, 0.07999999821186066);
+      background-color:#FFFFFF;
+      display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px 50px;
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+      animation: fadeInUp 1500ms ease-in-out;
+    
+  }
+  .cap_card_header{
+    text-align:left;
+    font-size:20px;
+    font-weight:bold;
+    line-height: 0.8;
+    letter-spacing: 1.2px;
+    padding-bottom: 10px;
+  }
+  .cap_card_intro{
+    font-weight:normal;
+    font-size:15px;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    color: #656B8E;
+  }
+  .A7{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 25px;
+    font-family: Lato;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+    color:#000000;
+}
+.A7:hover{  
+    opacity: 0.5;
+    color: #000000;
+}
+.A8{  
+    margin: 0;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeInUp;
+    line-height: 20px;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    padding: 3.5px 0px;
+    color:#000000;
+}
+.A8:hover{
+    opacity: 0.5;
+    color:#000000;
+}
+.rounded{
+    position: relative;
+    left: 15px;
+  border-top: 3px solid #562AF0;
+  border-radius: 5px;
+}

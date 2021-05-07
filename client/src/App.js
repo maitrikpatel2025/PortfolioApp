@@ -41,6 +41,12 @@ import TestimonialEdit from "./Components/Manager/Testimonial/TestimonialEdit";
 import TestimonialDelete from "./Components/Manager/Testimonial/TestimonialDelete";
 import Works from "./Components/Works/Works";
 import Scrolls from "./Components/Scrolls/Scrolls";
+import ViewCaseStudy from "./Components/ViewCaseStudy/ViewCaseStudy";
+import ScrollTOTop from "./Components/ScrollToTop/ScrollTOTop";
+import Capabilities from "./Components/capabilities/capabilities";
+import Contacts from "./Components/Contacts/Contacts";
+import Thankyou from "./Components/Thankyou/Thankyou";
+import ContactList from "./Components/Manager/Contact/ContactList";
 
 class App extends Component {
   render() {
@@ -48,18 +54,26 @@ class App extends Component {
       <div className="App">
         <Router history={history}>
           <div>
+            <ScrollTOTop>
             <Switch>
               < Route path="/" exact component={NavBar} />
               < Route path="/story" exact component={NavBar} />
               < Route path="/works" exact component={NavBar} />
+              < Route path="/works/projects/:id" exact component={NavBar} />
               < Route path="/capabilities" exact component={NavBar} />
               < Route path="/contact" exact component={NavBar} />
+              < Route path="/thankyou" exact component={NavBar} />
             </Switch>
+            </ScrollTOTop>
             < Route path="/admin" component={Admin} />
             <div className="Page">
               <Route path='/' exact component={Home} />
               <Route path='/story' exact component={Story} />
               <Route path='/works' exact component={Works} />
+              <Route path='/capabilities' exact component={Capabilities} />
+              <Route path='/contact' exact component={Contacts} />
+              <Route path='/thankyou' exact component={Thankyou} />
+              <Route path="/works/projects/:id" exact component={ViewCaseStudy} />
               <Route path='/manager/login' exact component={SignIn} />
               <Route path="/logout" exact component={SignOut} />
               <Route path="/admin/projects" exact component={ProjectsList} />
@@ -118,9 +132,10 @@ class App extends Component {
                 exact
                 component={TestimonialDelete}
               />
+              <Route path="/admin/contact" exact component={ContactList} />
             </div>
           </div>
-          <Scrolls/>
+          <Scrolls />
         </Router>
       </div>
     );

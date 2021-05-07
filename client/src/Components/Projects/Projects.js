@@ -29,7 +29,7 @@ class Projects extends Component {
                             );
                         })}
                         <div className="row btn_project">
-                            <Link to="/works">
+                            <Link to={`/works/projects/${project._id}`}>
                                 <Button Color Text="View Case Study" />
                             </Link>
                         </div>
@@ -37,7 +37,7 @@ class Projects extends Component {
                 </div>
                 <div className="col-lg-6 col-md-12">
                     <span className="img_animat1">
-                        <img alt="laginsd" src={project.image_url} className="img-fluid" />
+                        <img alt="laginsd" src={project.image_url} className="img-fluid animat1" />
                     </span>
                 </div>
             </div>)

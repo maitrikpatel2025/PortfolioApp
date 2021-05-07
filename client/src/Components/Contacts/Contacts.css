@@ -1,0 +1,88 @@
+.contact_intro_layout1{
+    font-size: 18px;
+    text-align: center;
+    color: #656B8E;
+}
+.From_Contact{
+    text-align: center;
+}
+.field_input{
+    width: 500px;
+    border:1px solid rgba(255, 51.00000075995922, 102.00000151991844, 1);
+    border-radius: 8px;
+    background: transparent ;
+    font-size: 18px;
+    text-align: left;
+    padding: 0.5em 2.3em;
+    margin:0 1.5em 1.5em 0;
+  
+}
+.field_text {
+    width: 500px;
+    padding: 0.5em 2.3em;
+    margin:0 1.5em 1.5em 0;
+    height: 140px;
+    border:1px solid rgba(255, 51.00000075995922, 102.00000151991844, 1);
+    border-radius: 8px;
+    background: transparent ;
+    font-size: 18px;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+  ::placeholder {
+    color: #000000;
+    
+  }
+  .Contact{
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+  }
+    /* 
+    ##Device = Tablets, Ipads (portrait)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .field_input{
+        width: 250px;
+    }
+    .field_text{
+        width: 250px;
+    }
+  }
+  
+  /* 
+    ##Device = Tablets, Ipads (landscape)
+    ##Screen = B/w 768px to 1024px
+  */
+  
+  @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+
+  }
+  
+  /* 
+    ##Device = Low Resolution Tablets, Mobiles (Landscape)
+    ##Screen = B/w 481px to 767px
+  */
+  
+  @media (min-width: 481px) and (max-width: 767px) {
+
+  }
+  
+  /* 
+    ##Device = Most of the Smartphones Mobiles (Portrait)
+    ##Screen = B/w 320px to 479px
+  */
+  
+  @media (min-width: 320px) and (max-width: 480px) {
+    
+   
+    .field_input{
+        width: 250px;
+    }
+    .field_text{
+        width: 250px;
+    }
+
+  }

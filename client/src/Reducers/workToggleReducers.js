@@ -12,21 +12,21 @@ export default (state = { initialState }, action) => {
         case TOGGLE_PROJECTS:
             return {
                 ...state,
-                isProjectsOpen: !state.isProjectsOpen,
+                isProjectsOpen: true,
                 isMiniProjectOpen: false,
                 isExperienceOpen: false
             };
         case TOGGLE_MINI_PROJECTS:
             return {
                 ...state,
-                isMiniProjectOpen: !state.isMiniProjectOpen,
+                isMiniProjectOpen: true,
                 isProjectsOpen: false,
                 isExperienceOpen: false
             };
         case TOGGLE_EXPERIENCE:
             return {
                 ...state,
-                isExperienceOpen: !state.isExperienceOpen,
+                isExperienceOpen: true,
                 isMiniProjectOpen: false,
                 isProjectsOpen: false
             };

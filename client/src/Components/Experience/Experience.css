@@ -1,0 +1,40 @@
+.exper{
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
+}
+.timeline .timeline-item .card {
+	max-height: 300px;
+}
+
+.timeline .timeline-item {
+    display: flex;
+    position: relative;
+}
+
+.timeline .timeline-item::before {
+    background: #562AF0;
+    content: "";
+    height: 100%;
+    left: 19px;
+    position: absolute;
+    width: 2px;
+		z-index: -1;
+}
+
+.timeline .timeline-item .timeline-icon .badge {
+		margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.expbox{
+    padding-bottom: 30px;
+}
+.exp_card1{
+    font-family: "Lato",sans-serif;
+	text-align:left;
+	font-size:22px;
+  font-weight:bold;
+  line-height: 1.4;
+  letter-spacing: 2px;
+}
