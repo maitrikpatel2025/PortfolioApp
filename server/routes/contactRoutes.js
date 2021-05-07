@@ -6,12 +6,12 @@ const contactmiddle = require("../middleware/contactmiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/contact", contactcontroll.getallContact);
-  app.post("/contact/add", contactcontroll.createContact);
-  app.get("/contact/:id", contactmiddle.getContact, contactcontroll.getbyid);
-  app.put("/contact/:id", contactmiddle.getContact, contactcontroll.editbyid);
+  app.get("/api/contact", contactcontroll.getallContact);
+  app.post("/api/contact/add", contactcontroll.createContact);
+  app.get("/api/contact/:id", contactmiddle.getContact, contactcontroll.getbyid);
+  app.put("/api/contact/:id", contactmiddle.getContact, contactcontroll.editbyid);
   app.delete(
-    "/contact/:id",
+    "/api/contact/:id",
     contactmiddle.getContact,
     contactcontroll.detetebyid
   );

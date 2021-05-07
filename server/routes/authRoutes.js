@@ -10,9 +10,9 @@ module.exports = function (app) {
   app.get("/", function (req, res) {
     res.send({ hi: "there" });
   });
-  app.post("/signin", requireSignin, Authentication.signin);
-  app.post("/signup", Authentication.signup);
-  app.get("/logout", function (req, res) {
+  app.post("/api/signin", requireSignin, Authentication.signin);
+  app.post("/api/signup", Authentication.signup);
+  app.get("/api/logout", function (req, res) {
     req.logout();
     res.redirect("/");
   });

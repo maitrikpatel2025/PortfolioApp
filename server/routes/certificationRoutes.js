@@ -6,20 +6,20 @@ const certificationmiddle = require("../middleware/certificationmiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/certification", certificationcontroll.getallcertification);
-  app.post("/certification/add", certificationcontroll.createcertification);
+  app.get("/api/certification", certificationcontroll.getallcertification);
+  app.post("api/certification/add", certificationcontroll.createcertification);
   app.get(
-    "/certification/:id",
+    "/api/certification/:id",
     certificationmiddle.getCertification,
     certificationcontroll.getbyid
   );
   app.put(
-    "/certification/:id",
+    "/api/certification/:id",
     certificationmiddle.getCertification,
     certificationcontroll.editbyid
   );
   app.delete(
-    "/certification/:id",
+    "/api/certification/:id",
     certificationmiddle.getCertification,
     certificationcontroll.deletebyid
   );

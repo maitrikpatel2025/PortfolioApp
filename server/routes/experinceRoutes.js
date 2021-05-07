@@ -6,20 +6,20 @@ const expericencemiddle = require("../middleware/expericencemiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/expericence", expericencecontroll.getallExperience);
-  app.post("/expericence/add", expericencecontroll.createExperience);
+  app.get("/api/expericence", expericencecontroll.getallExperience);
+  app.post("/api/expericence/add", expericencecontroll.createExperience);
   app.get(
-    "/expericence/:id",
+    "/api/expericence/:id",
     expericencemiddle.getExperience,
     expericencecontroll.getbyid
   );
   app.put(
-    "/expericence/:id",
+    "/api/expericence/:id",
     expericencemiddle.getExperience,
     expericencecontroll.editbyid
   );
   app.delete(
-    "/expericence/:id",
+    "/api/expericence/:id",
     expericencemiddle.getExperience,
     expericencecontroll.deletebyid
   );

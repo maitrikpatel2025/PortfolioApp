@@ -112,16 +112,7 @@ class TestimonialForm extends Component {
 
 }
 
-const validate = (formValues) => {
-    const error = {};
-    if (!formValues.testi_name) {
-        error.testi_name = "You must enter a title";
-    }
-    return error;
-};
-
 
 export default reduxForm({
     form: "TestimonialForm",
-    validate
 })(TestimonialForm);

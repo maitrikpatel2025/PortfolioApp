@@ -44,7 +44,7 @@ exports.editbyid = async (req, res) => {
     res.testimonial.testi_linkedin_link = req.body.testi_linkedin_link;
     res.testimonial.testi_message = req.body.testi_message;
     res.testimonial.testi_profession = req.body.testi_profession;
-    res.testimonial.receive_date = req.body.testimonial.receive_date;
+    res.testimonial.receive_date = req.body.receive_date;
   }
   try {
     const updatetestimonial = await res.testimonial.save();

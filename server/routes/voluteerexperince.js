@@ -7,25 +7,25 @@ const voluteerexpericencemiddle = require("../middleware/voluteerexpericencemidd
 
 module.exports = function (app) {
   app.get(
-    "/voluteerexpericence",
+    "/api/voluteerexpericence",
     voluteerexpericencecontroll.getsallVoluteerExpericence
   );
   app.post(
-    "/voluteerexpericence/add",
+    "/api/voluteerexpericence/add",
     voluteerexpericencecontroll.createVoluteerExperience
   );
   app.get(
-    "/voluteerexpericence/:id",
+    "/api/voluteerexpericence/:id",
     voluteerexpericencemiddle.getVoluteerExperience,
     voluteerexpericencecontroll.getbyid
   );
   app.put(
-    "/voluteerexpericence/:id",
+    "/api/voluteerexpericence/:id",
     voluteerexpericencemiddle.getVoluteerExperience,
     voluteerexpericencecontroll.editbyid
   );
   app.delete(
-    "/voluteerexpericence/:id",
+    "/api/voluteerexpericence/:id",
     voluteerexpericencemiddle.getVoluteerExperience,
     voluteerexpericencecontroll.deletebyid
   );

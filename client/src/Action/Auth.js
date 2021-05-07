@@ -4,7 +4,7 @@ import authapi from '../Api/authapi';
 export const signup = (formProps, callback) => async dispatch => {
     try {
         const response = await authapi.post(
-            '/signup',
+            '/api/signup',
             formProps
         );
 
@@ -19,7 +19,7 @@ export const signup = (formProps, callback) => async dispatch => {
 export const signin = (formProps, callback) => async dispatch => {
     try {
         const response = await authapi.post(
-            '/signin',
+            '/api/signin',
             formProps
         );
 

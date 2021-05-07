@@ -6,9 +6,9 @@ const testimonialmiddle = require("../middleware/testimonialmiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/testimonial", testimonialcontroll.getallTestimonial);
-  app.post("/testimonial/add", testimonialcontroll.createTestimonial);
-  app.get("/testimonial/:id", testimonialmiddle.getTestimonial, testimonialcontroll.getbyid);
-  app.put("/testimonial/:id", testimonialmiddle.getTestimonial, testimonialcontroll.editbyid);
-  app.delete("/testimonial/:id", testimonialmiddle.getTestimonial, testimonialcontroll.detetebyid);
+  app.get("/api/testimonial", testimonialcontroll.getallTestimonial);
+  app.post("/api/testimonial/add", testimonialcontroll.createTestimonial);
+  app.get("/api/testimonial/:id", testimonialmiddle.getTestimonial, testimonialcontroll.getbyid);
+  app.put("/api/testimonial/:id", testimonialmiddle.getTestimonial, testimonialcontroll.editbyid);
+  app.delete("/api/testimonial/:id", testimonialmiddle.getTestimonial, testimonialcontroll.detetebyid);
 };

@@ -7,19 +7,19 @@ const projectsmiddle = require("../middleware/projectsmiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/project", projectscontroll.getallprojects);
+  app.get("/api/project", projectscontroll.getallprojects);
   app.post(
-    "/project/add",
+    "/api/project/add",
     projectscontroll.createprojects
   );
-  app.get("/project/:id", projectsmiddle.getProject, projectscontroll.getbyid);
+  app.get("/api/project/:id", projectsmiddle.getProject, projectscontroll.getbyid);
   app.put(
-    "/project/:id",
+    "/api/project/:id",
     projectsmiddle.getProject,
     projectscontroll.editbyid
   );
   app.delete(
-    "/project/:id",
+    "/api/project/:id",
     projectsmiddle.getProject,
     projectscontroll.deletebyid
   );

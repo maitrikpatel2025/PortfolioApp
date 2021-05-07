@@ -6,12 +6,12 @@ const meetingmiddle = require("../middleware/meetingmiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/meeting", meetingcontroll.getallMeeting);
-  app.post("/meeting/add", meetingcontroll.createMeeting);
-  app.get("/meeting/:id", meetingmiddle.getMeeting, meetingcontroll.getbyid);
-  app.put("/meeting/:id", meetingmiddle.getMeeting, meetingcontroll.editbyid);
+  app.get("/api/meeting", meetingcontroll.getallMeeting);
+  app.post("/api/meeting/add", meetingcontroll.createMeeting);
+  app.get("/api/meeting/:id", meetingmiddle.getMeeting, meetingcontroll.getbyid);
+  app.put("/api/meeting/:id", meetingmiddle.getMeeting, meetingcontroll.editbyid);
   app.delete(
-    "/meeting/:id",
+    "/api/meeting/:id",
     meetingmiddle.getMeeting,
     meetingcontroll.detetebyid
   );

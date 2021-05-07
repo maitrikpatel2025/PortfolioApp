@@ -122,7 +122,7 @@ Python /JavaScript / Reactjs / React Native and some frameworks.</p>
                 <div className="col-md-5 col-md-offset-4 card3">
 
                   <img alt="dsgkl" src={Icon3} />
-                  <h5 className="card_header">User Experince</h5>
+                  <h5 className="card_header">User Experience</h5>
                   <h5 className="card_header"> &amp; Development</h5>
                   <p className="card_intro">Every interaction you apply to your brand makes you stronger and more priority.</p>
                 </div>

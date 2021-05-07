@@ -6,20 +6,20 @@ const miniprojectsmiddle = require("../middleware/miniprojectsmiddle");
 // const requireSignin = passport.authenticate('local', { session: false });
 
 module.exports = function (app) {
-  app.get("/miniprojects", miniprojectscontroll.getallminiprojects);
-  app.post("/miniprojects/add", miniprojectscontroll.createminiprojects);
+  app.get("/api/miniprojects", miniprojectscontroll.getallminiprojects);
+  app.post("/api/miniprojects/add", miniprojectscontroll.createminiprojects);
   app.get(
-    "/miniprojects/:id",
+    "/api/miniprojects/:id",
     miniprojectsmiddle.getMiniproject,
     miniprojectscontroll.getbyid
   );
   app.put(
-    "/miniprojects/:id",
+    "/api/miniprojects/:id",
     miniprojectsmiddle.getMiniproject,
     miniprojectscontroll.editbyid
   );
   app.delete(
-    "/miniprojects/:id",
+    "/api/miniprojects/:id",
     miniprojectsmiddle.getMiniproject,
     miniprojectscontroll.deletebyid
   );
