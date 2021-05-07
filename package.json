@@ -7,9 +7,9 @@
     "start": "node server/index.js",
     "server": "nodemon server/index.js",
     "client": "npm run start --prefix client",
-    "admin": "npm run start --prefix admin",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "react-scripts build && (cd server && npm install)"
+    "build": "react-scripts build && (cd server && npm install)",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
