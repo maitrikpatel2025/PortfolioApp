@@ -77,7 +77,7 @@ class ViewCaseStudy extends Component {
 
                         <div className="row justify-content-center role_box">
                             <div className="col-3 justify-content-center">
-                                <p className="View_intro">skills</p>
+                                <p className="View_intro">Skills</p>
                                 <div>
                                     {skills.map((skill) => {
                                         return (
