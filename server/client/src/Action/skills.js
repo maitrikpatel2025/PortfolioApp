@@ -1,4 +1,4 @@
-import skill from '../Api/authapi';
+import axios from 'axios';
 import history from '../history';
 import {
   CREATE_SKILL,
@@ -9,31 +9,31 @@ import {
 } from './types';
 
 export const createSkill = formValues => async (dispatch) => {
-    const response = await skill.post('/api/skills/add', { ...formValues });
+    const response = await axios.post('/api/skills/add', { ...formValues });
     dispatch({ type: CREATE_SKILL, payload: response.data });
     history.push('/admin/skills');
   };
   
   export const fetchskills = () => async dispatch => {
-    const response = await skill.get('/api/skills');
+    const response = await axios.get('/api/skills');
   
     dispatch({ type: FETCH_SKILLS, payload: response.data });
   };
   
   export const fetchSkill = _id => async dispatch => {
-    const response = await skill.get(`/api/skills/${_id}`);
+    const response = await axios.get(`/api/skills/${_id}`);
   
     dispatch({ type: FETCH_SKILL, payload: response.data });
   };
   
   export const editSkill = (_id, formValues) => async dispatch => {
-    const response = await skill.put(`/api/skills/${_id}`, formValues);
+    const response = await axios.put(`/api/skills/${_id}`, formValues);
     dispatch({ type: EDIT_SKILL, payload: response.data });
     history.push('/admin/skills');
   };
   
   export const deleteSkill = _id => async dispatch => {
-    await skill.delete(`/api/skills/${_id}`);
+    await axios.delete(`/api/skills/${_id}`);
   
     dispatch({ type: DELETE_SKILL, payload: _id });
     history.push('/admin/skills');

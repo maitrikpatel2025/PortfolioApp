@@ -1,5 +1,8 @@
 .SubNav{
     margin-top: 1.5%;
+ 
+    -webkit-animation: fadeInUp 1500ms ease-in-out; /* Chrome, Safari, Opera */
+    animation: fadeInUp 1500ms ease-in-out;
 }
 .menu {
     overflow:hidden;
@@ -44,7 +47,8 @@
 
 @media (min-width: 320px) and (max-width: 480px) {
     .SubNav{
-        margin-top: 40px
+        margin-top: 40px;
+        margin-left:40px
     }
     .menu {
         display: inline;
