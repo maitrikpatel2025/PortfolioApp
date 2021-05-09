@@ -22,7 +22,9 @@ class Footer extends Component {
                                     <div className="footer_layout1">
                                         <span className="footer_intro_layout1">Email me at</span>
                                         <br />
-                                        <span className="footer_tagline_layout1">maitrik.patel2025@gmail.com</span>
+                                        <a href="mailto:maitrik.patel2025@gmail.com">
+                                            <span className="footer_tagline_layout1">maitrik.patel2025@gmail.com</span>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
