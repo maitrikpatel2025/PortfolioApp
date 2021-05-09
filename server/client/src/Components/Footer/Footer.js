@@ -44,13 +44,13 @@ class Footer extends Component {
                                     <a href="https://github.com/maitrikpatel2025">
                                         <i className="big inverted github icon"></i>
                                     </a>
-                                    <a href="https://www.facebook.com/maitrik.patel2025/">
+                                    <a href="https://www.facebook.com/maitrik.patel2025">
                                         <i className="big inverted facebook icon"></i>
                                     </a>
                                     <a href="https://twitter.com/mkpatel2025">
                                         <i className="big inverted twitter icon"></i>
                                     </a>
-                                    <a href="https://www.instagram.com/maitrik_patel2025/?hl=en">
+                                    <a href="https://www.instagram.com/maitrik_patel2025.py">
                                         <i className="big inverted instagram icon"></i>
                                     </a>
                                 </div>

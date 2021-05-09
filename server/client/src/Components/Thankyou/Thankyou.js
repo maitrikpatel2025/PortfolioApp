@@ -9,8 +9,7 @@ const Thankyou = () => {
                     <div className="text_layout1">
                         <h1 className="tagline_layout1">Thank <span className="tagline2_layout1"> you</span></h1>
                     </div>
-                    <p className="intro_layout1">Thank you for submitting your application. We have begun our review. Please look for an email in the next 72 hours.
-You should recived a conformation email soon.</p>
+                    <p className="intro_layout1">Thank you for submitting your application. You will recived an email soon.</p>
                 </div>
             </div>
         </div>
