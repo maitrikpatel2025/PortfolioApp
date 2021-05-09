@@ -7,6 +7,7 @@ const passport = require("passport");
 const http = require("http");
 const mongoose = require("mongoose");
 const morgan = require("morgan");
+const cors = require("cors");
 
 const keys = require("./config/key");
 
@@ -27,6 +28,7 @@ app.use(passport.session());
 
 //middleware
 app.use(morgan("combined"));
+app.use(cors());
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
