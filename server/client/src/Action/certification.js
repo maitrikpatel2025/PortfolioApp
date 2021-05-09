@@ -1,4 +1,4 @@
-import axios from 'axios';
+import certification from '../Api/authapi';
 import history from '../history';
 import {
   CREATE_CERTIFICATION,
@@ -9,32 +9,32 @@ import {
 } from './types';
 
 export const createCertification = formValues => async (dispatch) => {
-    const response = await axios.post('/api/certification/add', { ...formValues });
+    const response = await certification.post('/api/certification/add', { ...formValues });
     dispatch({ type: CREATE_CERTIFICATION, payload: response.data });
     history.push('/admin/certifications');
   };
   
   export const fetchcertifications = () => async dispatch => {
-    const response = await axios.get('/api/certification');
+    const response = await certification.get('/api/certification');
   
     dispatch({ type: FETCH_CERTIFICATIONS, payload: response.data });
   };
   
   export const fetchCertification = _id => async dispatch => {
-    const response = await axios.get(`/api/certification/${_id}`);
+    const response = await certification.get(`/api/certification/${_id}`);
   
     dispatch({ type: FETCH_CERTIFICATION, payload: response.data });
   };
   
   export const editCertification = (_id, formValues) => async dispatch => {
-    const response = await axios.put(`/api/certification/${_id}`, formValues);
+    const response = await certification.put(`/api/certification/${_id}`, formValues);
   
     dispatch({ type: EDIT_CERTIFICATION, payload: response.data });
     history.push('/admin/certifications');
   };
   
   export const deleteCertification = _id => async dispatch => {
-    await axios.delete(`/api/certification/${_id}`);
+    await certification.delete(`/api/certification/${_id}`);
   
     dispatch({ type: DELETE_CERTIFICATION, payload: _id });
     history.push('/admin/certifications');
