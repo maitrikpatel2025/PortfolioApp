@@ -26,7 +26,7 @@ const Home = () => {
               <div className="col-lg-6 content-center">
                 <div className="header_text">
                   <div className="text_layout1">
-                    <h1 className="tagline_layout1">Say Hello to the Your <span className="tagline2_layout1"> Future Product</span></h1>
+                    <h1 className="tagline_layout1">Say Hello to Your <span className="tagline2_layout1"> Future Product</span></h1>
                   </div>
                   <p className="intro_layout1">I’m Maitrik Patel, an experienced software Developer who constantly
                 <br />

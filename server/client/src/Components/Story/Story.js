@@ -24,17 +24,17 @@ const Story = () => {
                                     expertise is in building scalable applications.
                 </p>
                                 <p className="story_intro_layout1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp;Outside of his full-time commitments, He work with a select freelance client base to create amazing products and solutions
+                                    &nbsp;&nbsp;&nbsp;&nbsp;Outside of his full-time commitments, He work's with a freelance client base to create amazing products and solutions
 
                 </p>
                                 <p className="story_intro_layout1">
                                     &nbsp;&nbsp;&nbsp;&nbsp; He loves building things. While hard
                                     engineering problem are often intrinsically fun to tackle. He
-                                    has a unique talent at seeing the big picture potential in a
+                                    has a unique talent at seeing the future potential in a
                                     product or brand and then bringing it to life.
                 </p>
                                 <p className="story_intro_layout1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp; Maitrik has worked for has carried a
+                                    &nbsp;&nbsp;&nbsp;&nbsp; Maitrik has worked for and carried a
                                     strong mission behind the work—ranging from sustainability and
                                     transportation to education. He tries to keep that same ethos
                                     for doing good in his personal life as well. He strongly
@@ -44,10 +44,10 @@ const Story = () => {
                                     production crew.
                 </p>
                                 <p className="story_intro_layout1">
-                                    &nbsp;&nbsp;&nbsp;&nbsp; He enjoy creating things that live on
+                                    &nbsp;&nbsp;&nbsp;&nbsp; He enjoy's creating things that are on
                                     the internet, whether that be websites, applications, or
                                     anything in between. His goal is to always build products that
-                                    provide pixel-perfect, performant experiences.
+                                    provide pixel-perfect performance and experiences.
                 </p>
                                 <p className="story_intro_layout1">
                                     &nbsp;&nbsp;&nbsp;&nbsp; Outside of work maitrik finds
@@ -68,8 +68,7 @@ const Story = () => {
                             <p className="Q1">
                                 “You cannot change what you are, only what you do.”
                                 <br />
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;–
                                 Philip Pullman
