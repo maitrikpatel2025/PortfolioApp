@@ -26,7 +26,7 @@ const Home = () => {
               <div className="col-lg-6 content-center">
                 <div className="header_text">
                   <div className="text_layout1">
-                    <h1 className="tagline_layout1">Say Hello to Your <span className="tagline2_layout1"> Future Product</span></h1>
+                    <h1 className="tagline_layout1">Say Hello To Your <span className="tagline2_layout1"> Future Product</span></h1>
                   </div>
                   <p className="intro_layout1">I’m Maitrik Patel, an experienced software Developer who constantly
                 <br />
@@ -62,7 +62,7 @@ const Home = () => {
             <div className="col-lg-6 col-md-12 sm-text-center">
               <div className="header_text2">
                 <div className="text_layout2">
-                  <span className="tagline_layout2">Who IS <span className="tagline2_layout2">Maitrik Patel</span></span>
+                  <span className="tagline_layout2">Who is <span className="tagline2_layout2">Maitrik Patel</span></span>
                 </div>
                 <div className="intro_layout2">
                   <p className="intro1_layout2">An innovative software developer having an experience of building Web and Mobile applications with
