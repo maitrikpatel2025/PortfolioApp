@@ -1,0 +1,40 @@
+.hangout_no_btn{
+    position: absolute;
+    left: 300px
+}
+
+  
+.hangout_no_btn:hover{
+    left: 150px;
+    top: 200x;
+  }
+.btn_yes{
+    display:inline-block;
+    padding: 0.8em 2.3em;
+    border:0.12em solid  #562AF0;
+    margin:0 1.5em 1.5em 0;
+    border-radius:0.4em;
+    box-sizing: border-box;
+    text-align:center;
+    transition: all 0.2s;  
+    color:#000000   
+}
+.btn_yes:hover{
+    color:#ffffff;
+    background-color: #562AF0;
+}
+.btn_no{
+    display:inline-block;
+    padding: 0.8em 2.3em;
+    border:0.12em solid  #FF3366;
+    margin:0 1.5em 1.5em 0;
+    border-radius:0.4em;
+    box-sizing: border-box;
+    text-align:center;
+    transition: all 0.2s;  
+    color:#000000   
+}
+.btn_no:hover{
+    color:#ffffff;
+    background-color: #FF3366;
+}

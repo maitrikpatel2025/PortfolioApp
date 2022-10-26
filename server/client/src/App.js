@@ -47,6 +47,8 @@ import Capabilities from "./Components/capabilities/capabilities";
 import Contacts from "./Components/Contacts/Contacts";
 import Thankyou from "./Components/Thankyou/Thankyou";
 import ContactList from "./Components/Manager/Contact/ContactList";
+import HangOut from "./Components/HangOut/HangOut";
+import HangOutthank from "./Components/HangOut/HangOutthank";
 
 class App extends Component {
   render() {
@@ -73,6 +75,8 @@ class App extends Component {
               <Route path='/capabilities' exact component={Capabilities} />
               <Route path='/contact' exact component={Contacts} />
               <Route path='/thankyou' exact component={Thankyou} />
+              <Route path='/hangoutthankyou' exact component={HangOutthank} />
+              <Route path='/hangout' exact component={HangOut} />
               <Route path="/works/projects/:id" exact component={ViewCaseStudy} />
               <Route path='/manager/login' exact component={SignIn} />
               <Route path="/logout" exact component={SignOut} />
