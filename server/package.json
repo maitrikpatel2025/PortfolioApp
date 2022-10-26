@@ -4,14 +4,14 @@
   "description": "Maitrik Portfoilo",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "server": "nodemon index.js",
-    "client": "npm run start --prefix client",
+    "start": "SET NODE_OPTIONS=--openssl-legacy-provider && node index.js",
+    "server": "SET NODE_OPTIONS=--openssl-legacy-provider && nodemon index.js",
+    "client": "SET NODE_OPTIONS=--openssl-legacy-provider && npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" ",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "engines": {
-    "node": "14.x"
+    "node": "17.x"
   },
   "author": "",
   "license": "ISC",
